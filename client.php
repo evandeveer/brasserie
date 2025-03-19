@@ -3,6 +3,7 @@ $servername = "sql208.infinityfree.com";
 $username = "if0_38342249";
 $password = "8p8SMDlMUOmSd";
 $dbname = "if0_38342249_brasserie";
+date_default_timezone_set('Europe/Paris'); 
 
 $bdd = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
 
@@ -11,8 +12,6 @@ if (isset($_GET['id_client'])) {
 } else {
     header("Location: index.php");
 }
-
-
 
 $requete_fidelite = $bdd->prepare("SELECT fidelite FROM utilisateurs WHERE id = :id_client");
 $requete_fidelite->execute(['id_client' => $id_client]);
@@ -36,11 +35,6 @@ if (isset($_POST['ajouter_reservation'])) {
 $requete_reservations = $bdd->prepare("SELECT * FROM reservations WHERE id_client = :id_client");
 $requete_reservations->execute(['id_client' => $id_client]);
 $reservations = $requete_reservations->fetchAll(PDO::FETCH_ASSOC);
-
-$nom_produit_resa = $bdd->prepare("SELECT nom FROM produits WHERE id = :id_produit");
-$nom_produit_resa->execute(['id_produit' => $requete_reservations['id_produit']]);
-$nom_produit_resa = $nom_produit_resa->fetch(PDO::FETCH_ASSOC);
-
 
 $produits_query = $bdd->query("SELECT * FROM produits");
 $produits = $produits_query->fetchAll(PDO::FETCH_ASSOC);
@@ -132,11 +126,11 @@ $produits = $produits_query->fetchAll(PDO::FETCH_ASSOC);
 <div class="fidelite-section">
       <h2>Vos points de fidélité</h2>
       <p><strong>Points actuels :</strong> <?= isset($fidelite['fidelite']) ? $fidelite['fidelite'] : 0 ?> points</p>
-    </div>
+</div>
 
-  <div class="container">
-   
-    
+
+
+<div class="container">
    
     <h2 class="w3-tag w3-wide">Produits Disponibles</h2>
     <?php foreach ($produits as $produit): ?>
@@ -148,42 +142,53 @@ $produits = $produits_query->fetchAll(PDO::FETCH_ASSOC);
         <p><strong>Quantité disponible :</strong> <?= htmlspecialchars($produit['quantite']); ?></p>
       </div>
     <?php endforeach; ?>
+</div>
+
+
+<div class="container">
 
     <h2 class="w3-tag w3-wide">Réservation de Produits</h2>
-    
     <form method="post">
+
       <div class="form-group">
         <label for="id_produit">Choisir un produit :</label>
         <select name="id_produit" class="w3-input w3-padding-16 w3-border" required>
-        
           <?php foreach ($produits as $produit): ?>
             <option value="<?= $produit['id']; ?>"><?= $produit['nom']; ?> (Quantité disponible: <?= $produit['quantite']; ?>)</option>
           <?php endforeach; ?>
-
         </select>
       </div>
+
       <div class="form-group">
         <label for="id_produit">Quantité :</label>
         <input class="w3-input w3-padding-16 w3-border" type="number" name="quantite" placeholder= "0" min="1" required>
       </div>
       <button type="submit" name="ajouter_reservation" class="w3-button w3-brown w3-block">Réserver</button>
+
     </form>
+</div>
 
-    <br><br>
 
+<div class="container">
     <h2 class="w3-tag w3-wide">Mes reservations Produits</h2>
+    <?php foreach ($reservations as $reservation): 
+    
+        ###recuperation du nom du produit a partir de l id###
+        $nom_produit_resa = $bdd->prepare("SELECT nom FROM produits WHERE id = :id_produit");
+        $nom_produit_resa->execute(['id_produit' => $reservation['id_produit']]);
+        $nom_produit_resa = $nom_produit_resa->fetch(PDO::FETCH_ASSOC);
+      ?>
 
-    <?php foreach ($reservations as $reservation): ?>
       <div class="product-item">
-        <h4><?= htmlspecialchars($reservation['id_produit']); ?></h4>
+        <h4><?= htmlspecialchars($nom_produit_resa['nom']); ?></h4>
         <p><strong>Quantité :</strong> <?= htmlspecialchars($reservation['quantite']); ?></p>
         <p><strong>Date de réservation :</strong> <?= htmlspecialchars($reservation['date_resa']); ?></p>
         <p><strong>Statut :</strong> <?= htmlspecialchars($reservation['statut_resa']); ?></p>
       </div>
     <?php endforeach; ?>
+</div>
 
 
-  </div>
 
 </body>
 </html>

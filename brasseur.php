@@ -225,51 +225,41 @@ $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
     <h5 class="w3-tag w3-wide">Gestion des Stocks</h5><br>
     <h6 class="w3-tag w3-wide">Matieres premieres</h5>
     <form method="post" class="add-form">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" name="nom" required placeholder="Nom"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="quantite" required placeholder="Quantité"></p>
-
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" name="nom" placeholder="Nom" required></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="quantite" placeholder="Quantité" required></p>
       <p><button class="w3-button w3-brown w3-block" type="submit" name="ajouter">Ajouter au stock</button></p>
     </form>
 
     <br>
 
+      <?php foreach ($stock_matieres_premieres as $matieres): ?>
+      <div class='stock-item'>
+          <span><?= htmlspecialchars($matieres['id']) ?></span>
 
-    <?php
+          <form method='post' class='inline-form'>
+              <input type='hidden' name='id' value='<?= $matieres['id'] ?>'>
+              <input type='text' name='nom' value='<?= htmlspecialchars($matieres['nom']) ?>' placeholder='Nom' required>
+              <input type='number' name='quantite' value='<?= htmlspecialchars($matieres['quantite']) ?>' step='any' placeholder='Quantité' required>
+              <button class='w3-button w3-brown' type='submit' name='modifier'>Modifier</button>
+          </form>
 
-      foreach ($stock_matieres_premieres as $matieres) {
-        echo "
-        <div class='stock-item'>
-            <span>" . htmlspecialchars($matieres['id']) . "</span>
-        
-            <form method='post' class='inline-form'>
-                <input type='hidden' name='id' value='" . $matieres['id'] . "'>
-                <input type='text' name='nom' value='" . htmlspecialchars($matieres['nom']) . "' required placeholder='Nom'>
-                <input type='number' name='quantite' value='" . htmlspecialchars($matieres['quantite']) . "' step='any' required placeholder='Quantité'>
-                <button class='w3-button w3-brown' type='submit' name='modifier'>Modifier</button>
-            </form>
-        
-            <form method='post' class='inline-form'>
-                <input type='hidden' name='id' value='" . $matieres['id'] . "'>
-                <button class='w3-button w3-grey' type='submit' name='supprimer'>Supprimer</button>
-            </form>
-        </div>";
-      }
-    
-    ?>
-
+          <form method='post' class='inline-form'>
+              <input type='hidden' name='id' value='<?= $matieres['id'] ?>'>
+              <button class='w3-button w3-grey' type='submit' name='supprimer'>Supprimer</button>
+          </form>
+      </div>
+    <?php endforeach; ?>
   </div>
-
-
   
   <div class="container">
     <h5 class="w3-tag w3-wide">Gestion des Stocks</h5><br>
     <h6 class="w3-tag w3-wide">Produits finis</h5>
     <form method="post" class="add-form">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" name="nom_produits_finis" required placeholder="Nom"></p>
-      <textarea class="w3-input w3-padding-16 w3-border" name="description_produits_finis" id="description_produits_finis" placeholder="Description" style="width: 100%; height: 100px; resize: none;"></textarea>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="prix_produits_finis" required placeholder="Prix unitaire"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="quantite_produits_finis" required placeholder="Quantité"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" name="image_produits_finis" required placeholder="Image"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" name="nom_produits_finis" placeholder="nom" required></p>
+      <textarea class="w3-input w3-padding-16 w3-border" name="description_produits_finis" id="description_produits_finis" placeholder="description" style="width: 100%; height: 100px; resize: none;"></textarea>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="prix_produits_finis" placeholder="prix unitaire" required></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="quantite_produits_finis" placeholder="quantité" required></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" name="image_produits_finis" placeholder=image" required></p>
 
       <p><button class="w3-button w3-brown w3-block" type="submit" name="ajouter_produits_finis">Ajouter au stock</button></p>
     </form>
@@ -277,34 +267,27 @@ $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
     <br>
 
 
-    <?php
+    <?php foreach ($stock_produits_finis as $produits_finis): ?>
+    <div class='stock-item'>
+        <p><?= htmlspecialchars($produits_finis['id']) ?></p>
 
-      foreach ($stock_produits_finis as $produits_finis) {
-        echo "
-        <div class='stock-item'>
-            <p>" . htmlspecialchars($produits_finis['id']) . "</p>
-        
-            <form method='post' class='inline-form'>
-                <input type='hidden' name='id_produits_finis' value='" . $produits_finis['id'] . "'>
-                <input style='width: 100px;' type='text' name='nom_produits_finis' value='" . htmlspecialchars($produits_finis['nom']) . "' required placeholder='Nom'>
-                <textarea style='width: 250px; height: 35px; resize: none;' name='description_produits_finis' id='description_produits_finis' placeholder='Description'>" . htmlspecialchars($produits_finis['description']) . "</textarea>
-                <input style='width: 50px;' type='number' name='prix_produits_finis' value='" . htmlspecialchars($produits_finis['prix']) . "' required placeholder='prix unitaire'>
-              
-                <input style='width: 50px;' type='number' name='quantite_produits_finis' value='" . htmlspecialchars($produits_finis['quantite']) . "' step='any' required placeholder='Quantité'>
-                <input style='width: 100px;' type='text' name='image_produits_finis' value='" . htmlspecialchars($produits_finis['image']) . "' step='any' placeholder='image'>
-                <button class='w3-button w3-brown' type='submit' name='modifier_produits_finis'>Modifier</button>
-            </form>
-        
-            <form method='post' class='inline-form'>
-                <input type='hidden' name='id_produits_finis' value='" . $produits_finis['id'] . "'>
-                <button class='w3-button w3-grey' type='submit' name='supprimer_produits_finis'>Supprimer</button>
-            </form>
-        </div>";
-        
-      }
-    
-    ?>
+        <form method='post' class='inline-form'>
+            <input type='hidden' name='id_produits_finis' value='<?= $produits_finis['id'] ?>'>
+            <input style='width: 100px;' type='text' name='nom_produits_finis' value='<?= htmlspecialchars($produits_finis['nom']) ?>' placeholder='nom' required>
+            <textarea style='width: 250px; height: 35px; resize: none;' name='description_produits_finis' id='description_produits_finis' placeholder='description'><?= htmlspecialchars($produits_finis['description']) ?></textarea>
+            <input style='width: 50px;' type='number' name='prix_produits_finis' value='<?= htmlspecialchars($produits_finis['prix']) ?>' placeholder='prix unitaire' required>
+          
+            <input style='width: 50px;' type='number' name='quantite_produits_finis' value='<?= htmlspecialchars($produits_finis['quantite']) ?>' step='any' required placeholder='quantite' required>
+            <input style='width: 100px;' type='text' name='image_produits_finis' value='<?= htmlspecialchars($produits_finis['image']) ?>' placeholder='image' required>
+            <button class='w3-button w3-brown' type='submit' name='modifier_produits_finis'>Modifier</button>
+        </form>
 
+        <form method='post' class='inline-form'>
+            <input type='hidden' name='id_produits_finis' value='<?= $produits_finis['id'] ?>'>
+            <button class='w3-button w3-grey' type='submit' name='supprimer_produits_finis'>Supprimer</button>
+        </form>
+    </div>
+  <?php endforeach; ?>
   </div>
 
 </body>

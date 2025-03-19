@@ -35,13 +35,16 @@ if (isset($_POST['email']) and (isset($_POST['mdp']))) {
         }elseif($role['role'] == "brasseur"){
             header("Location: brasseur.php");
         }
+        elseif($role['role'] == "client"){
+            header("Location: client.php?id_client=" . $user['id']);
+        }
         else {
             header("Location: index.php?message= Bienvenue ". $role['role'] . " " . $nom. " !&role=" . $role['role']);
         }
         
         
     } else {
-        echo "E-mail ou mot de passe incorrect.";
+        header("Location: connexion.php?errorConnexion=true");
     }
 }
 ?>

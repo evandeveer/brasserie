@@ -51,32 +51,44 @@ if (isset($_POST['supprimer'])) {
 if (isset($_POST['ajouter_produits_finis'])) {
     $nom = $_POST['nom_produits_finis'];
     $quantite = $_POST['quantite_produits_finis'];
+    $prix = $_POST['prix_produits_finis'];
+    $description = $_POST['description_produits_finis'];
+    $image = $_POST['image_produits_finis'];
 
-    $stmt = $bdd->prepare("INSERT INTO stock_produits (nom, quantite) VALUES (:nom, :quantite)");
+    $stmt = $bdd->prepare("INSERT INTO produits (nom, description, prix,quantite, image) VALUES (:nom, :description, :prix, :quantite, :image)");
     $stmt->execute(
         [
             'nom' => $nom,
             'quantite' => $quantite,
+            'description' => $description,
+            'prix' => $prix,
+            'image' => $image
         ]);
     }
 
 if (isset($_POST['modifier_produits_finis'])) {
     $id = $_POST['id_produits_finis'];
+    $prix = $_POST['prix_produits_finis'];
+    $description = $_POST['description_produits_finis'];
     $nom = $_POST['nom_produits_finis'];
     $quantite = $_POST['quantite_produits_finis'];
+    $image = $_POST['image_produits_finis'];
 
-    $requete = $bdd->prepare("UPDATE stock_produits SET nom = :nom, quantite = :quantite WHERE id = :id");
+    $requete = $bdd->prepare("UPDATE produits SET nom = :nom, description = :description, prix = :prix, quantite = :quantite, image = :image WHERE id = :id");
     $requete->execute(
         [
-        'nom' => $nom,
-        'quantite' => $quantite,
-        'id' => $id
+          'nom' => $nom,
+          'quantite' => $quantite,
+          'description' => $description,
+          'prix' => $prix,
+          'image' => $image,
+          'id' => $id
         ]);
     }
 
 if (isset($_POST['supprimer_produits_finis'])) {
     $id = $_POST['id_produits_finis'];
-    $requete = $bdd->prepare("DELETE FROM stock_produits WHERE id = :id");
+    $requete = $bdd->prepare("DELETE FROM produits WHERE id = :id");
     $requete->execute(
         [
         'id' => $id
@@ -86,7 +98,7 @@ if (isset($_POST['supprimer_produits_finis'])) {
 #### recup les infos ########
 
 $requete = $bdd->query("SELECT * FROM matieres_premieres");
-$requete2 = $bdd->query("SELECT * FROM stock_produits");
+$requete2 = $bdd->query("SELECT * FROM produits");
 $stock_matieres_premieres = $requete->fetchAll(PDO::FETCH_ASSOC);
 $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -174,8 +186,8 @@ $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
   <div class="container">
     <h5 class="w3-tag w3-wide">Calculs du Brasseur</h5>
     <form method="post">
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="volume" step="0.1" required placeholder="Volume de bière (L)"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="degre" step="0.1" required placeholder="Degré d'alcool (%)"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="volume" step="0.1" required placeholder="Volume de la production (en L)"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="degre" step="0.1" required placeholder="Volume d'alcool recherché (en %)"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="number" name="malt1" step="0.01" required placeholder="Moyenne EBC des Grains"></p>
     
       <p><button class="w3-button w3-brown w3-block" type="submit" name="calculer">Calculer</button></p>
@@ -198,9 +210,8 @@ $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
       echo "
       <div class='w3-panel w3-light-grey w3-margin-top'>
           <p><strong>Quantité de malt (kg) :</strong> " . round($malt_kg, 2) . " kg</p>
-          <p><strong>Quantité d'eau de brassage (L) :</strong> " . round($eau_braassage, 2) . " L</p>
-          <p><strong>Quantité d'eau de rinçage (L) :</strong> " . round($eau_rincage, 2) . " L</p>
-          <p><strong>MCU (Malt Color Units) :</strong> " . round($mcu, 4) . "</p>
+          <p><strong>Volume eau de brassage (L) :</strong> " . round($eau_braassage, 2) . " L</p>
+          <p><strong>Volume eau de rinçage (L) :</strong> " . round($eau_rincage, 2) . " L</p>
           <p><strong>Quantité de houblon amérisant (g) :</strong> " . round($houblon_americain, 2) . " g</p>
           <p><strong>Quantité de houblon aromatique (g) :</strong> " . round($houblon_aromatique, 2) . " g</p>
           <p><strong>Quantité de levure (g) :</strong> " . round($levure, 2) . " g</p>
@@ -255,7 +266,10 @@ $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
     <h6 class="w3-tag w3-wide">Produits finis</h5>
     <form method="post" class="add-form">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" name="nom_produits_finis" required placeholder="Nom"></p>
+      <textarea class="w3-input w3-padding-16 w3-border" name="description_produits_finis" id="description_produits_finis" placeholder="Description" style="width: 100%; height: 100px; resize: none;"></textarea>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="prix_produits_finis" required placeholder="Prix unitaire"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="number" name="quantite_produits_finis" required placeholder="Quantité"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" name="image_produits_finis" required placeholder="Image"></p>
 
       <p><button class="w3-button w3-brown w3-block" type="submit" name="ajouter_produits_finis">Ajouter au stock</button></p>
     </form>
@@ -268,12 +282,16 @@ $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
       foreach ($stock_produits_finis as $produits_finis) {
         echo "
         <div class='stock-item'>
-            <span>" . htmlspecialchars($produits_finis['id']) . "</span>
+            <p>" . htmlspecialchars($produits_finis['id']) . "</p>
         
             <form method='post' class='inline-form'>
                 <input type='hidden' name='id_produits_finis' value='" . $produits_finis['id'] . "'>
-                <input type='text' name='nom_produits_finis' value='" . htmlspecialchars($produits_finis['nom']) . "' required placeholder='Nom'>
-                <input type='number' name='quantite_produits_finis' value='" . htmlspecialchars($produits_finis['quantite']) . "' step='any' required placeholder='Quantité'>
+                <input style='width: 100px;' type='text' name='nom_produits_finis' value='" . htmlspecialchars($produits_finis['nom']) . "' required placeholder='Nom'>
+                <textarea style='width: 250px; height: 35px; resize: none;' name='description_produits_finis' id='description_produits_finis' placeholder='Description'>" . htmlspecialchars($produits_finis['description']) . "</textarea>
+                <input style='width: 50px;' type='number' name='prix_produits_finis' value='" . htmlspecialchars($produits_finis['prix']) . "' required placeholder='prix unitaire'>
+              
+                <input style='width: 50px;' type='number' name='quantite_produits_finis' value='" . htmlspecialchars($produits_finis['quantite']) . "' step='any' required placeholder='Quantité'>
+                <input style='width: 100px;' type='text' name='image_produits_finis' value='" . htmlspecialchars($produits_finis['image']) . "' step='any' placeholder='image'>
                 <button class='w3-button w3-brown' type='submit' name='modifier_produits_finis'>Modifier</button>
             </form>
         

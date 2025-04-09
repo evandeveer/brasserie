@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $servername = "sql208.infinityfree.com";
 $username = "if0_38342249";

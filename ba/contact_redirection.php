@@ -1,12 +1,10 @@
 <?php
-session_sta
+
 $servername = "sql208.infinityfree.com";
 $username = "if0_38342249"; 
 $password = "8p8SMDlMUOmSd"; 
 $dbname = "if0_38342249_brasserie";
 date_default_timezone_set('Europe/Paris');
-include 'Logs.php';
-
 
 $bdd = new PDO('mysql:host=' . $servername . ';dbname=' . $dbname . ';charset=utf8', $username, $password);
 
@@ -20,9 +18,8 @@ $result->execute(
     'Date' => date('Y-m-d H:i:s'),
     'Message' => $_POST['message']
     ]);
-
     header("Location: index.php");
-    Logs::WriteLogs("Contact envoyé -> $email");
+    return;
 
 
 

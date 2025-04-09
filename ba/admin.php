@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $servername = "sql208.infinityfree.com";
 $username = "if0_38342249"; 
@@ -9,29 +8,16 @@ include 'Logs.php';
 
 $bdd = new PDO('mysql:host=' . $servername . ';dbname=' . $dbname . ';charset=utf8', $username, $password);
 
-
-
- if (isset($_SESSION['id_user']) and isset($_SESSION['role'])) {
-     if ($_SESSION['role'] != "admin"){
-        header("Location: connexion.php");
-     }
- } else {
-     header("Location: connexion.php");
- }
-
-
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['ajouter'])) {
-     
+
         $requete = $bdd->prepare('INSERT INTO utilisateurs (nom, prenom, email, telephone, mdp, id_role) VALUES (:nom, :prenom, :email, :telephone, :mdp, :id_role)');
         $requete->execute([
             'nom' => $_POST['nom'],
             'prenom' => $_POST['prenom'],
             'email' => $_POST['email'],
             'telephone' => $_POST['telephone'],
-            'mdp' => md5("1234"),
+            'mdp' => password_hash("1234", PASSWORD_DEFAULT),
             'id_role' => $_POST['id_role']
         ]);
     } elseif (isset($_POST['modifier'])) {

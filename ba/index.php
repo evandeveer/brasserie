@@ -1,16 +1,3 @@
-<?php
-session_start();
-
-$servername = "sql208.infinityfree.com";
-$username = "if0_38342249"; 
-$password = "8p8SMDlMUOmSd"; 
-$dbname = "if0_38342249_brasserie";
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -109,25 +96,9 @@ body, html {
     <div class="w3-col s2">
       <a href="#contact" class="w3-button w3-block w3-black">CONTACT</a>
     </div>
-
-    <?php
-      if (isset($_SESSION['id_user']) and isset($_SESSION['role'])) {
-        $role = $_SESSION['role'];
-        $id_user = $_SESSION['id_user'];  
-       
-          echo '<div class="w3-col s2">
-                  <a href="' . $role .'.php" class="w3-button w3-block w3-black">' . strtoupper($role) .'</a>
-                </div>
-                
-                <div class="w3-col s2">
-                   <a href="deconnexion.php" class="w3-button w3-block w3-black">DECONNEXION</a>
-                </div>';
-        }else {
-            echo '<div class="w3-col s2">
-                    <a href="connexion.php" class="w3-button w3-block w3-black">CONNEXION</a>
-                </div>';
-        }
-    ?>
+    <div class="w3-col s2">
+      <a href="connexion.php" class="w3-button w3-block w3-black">CONNEXION</a>
+    </div>
   </div>
 </div>
 

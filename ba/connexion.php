@@ -63,8 +63,6 @@
       <form action="connexion_redirection.php" method="post">
         <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="E-mail" required name="email"></p>
         <p><input class="w3-input w3-padding-16 w3-border" type="password" placeholder="Mot de passe" required name="mdp"></p>
-
-        
         <?php if (isset($_GET['errorConnexion'])){
           echo '<p class="w3-text-red">E-mail ou mot de passe incorrect.</p>';
         }

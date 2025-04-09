@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 $servername = "sql208.infinityfree.com";
 $username = "if0_38342249";
 $password = "8p8SMDlMUOmSd";
@@ -8,6 +6,12 @@ $dbname = "if0_38342249_brasserie";
 date_default_timezone_set('Europe/Paris'); 
 
 $bdd = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
+
+if (isset($_GET['id_client'])) {
+    $id_client = $_GET['id_client'];
+} else {
+    header("Location: index.php");
+}
 
 $requete_fidelite = $bdd->prepare("SELECT fidelite FROM utilisateurs WHERE id = :id_client");
 $requete_fidelite->execute(['id_client' => $id_client]);

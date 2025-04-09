@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 $servername = "sql208.infinityfree.com";
 $username = "if0_38342249";
 $password = "8p8SMDlMUOmSd";
@@ -8,6 +6,8 @@ $dbname = "if0_38342249_brasserie";
 date_default_timezone_set('Europe/Paris'); 
 
 $bdd = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
+
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['ajouter_client'])) {
@@ -18,10 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'prenom' => $_POST['prenom'],
             'email' => $_POST['email'],
             'telephone' => $_POST['telephone'],
-            'mdp' => md5("1234"),
+            'mdp' => password_hash("1234", PASSWORD_DEFAULT),
         ]);
     }
-    
     elseif (isset($_POST['gestion_reservation'])) {
         
         $requete = $bdd->prepare('UPDATE reservation SET statut_resa = :statut_resa WHERE id = :id');

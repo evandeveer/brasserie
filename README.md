@@ -100,10 +100,10 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 ## 🔗 Relations Clés Étrangères   
 
 - **`utilisateurs.id_role`** → `roles.id`  
-  Chaque utilisateur est lié à un rôle (admin, brasseur, etc.)
+
 
 - **`reservations.id_client`** → `utilisateurs.id`  
-  Une réservation appartient à un utilisateur (le client)
+
 
 - **`reservations.id_produit`** → `produits.id`  
-  Une réservation concerne un produit spécifique
+

@@ -9,22 +9,44 @@ date_default_timezone_set('Europe/Paris');
 
 $bdd = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
 
+if (isset($_SESSION['id_user']) and isset($_SESSION['role'])) {
+    if ($_SESSION['role'] != "caissier"){
+       header("Location: connexion.php");
+    }
+} else {
+    header("Location: connexion.php");
+}
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['ajouter_client'])) {
 
-        $requete = $bdd->prepare('INSERT INTO utilisateurs (nom, prenom, email, telephone, mdp) VALUES (:nom, :prenom, :email, :telephone, :mdp)');
+        $requete = $bdd->prepare('INSERT INTO utilisateurs (nom, prenom, email, telephone, mdp, id_role) VALUES (:nom, :prenom, :email, :telephone, :mdp, :id_role)');
         $requete->execute([
             'nom' => $_POST['nom'],
             'prenom' => $_POST['prenom'],
             'email' => $_POST['email'],
             'telephone' => $_POST['telephone'],
             'mdp' => md5("1234"),
+            'id_role' => 1 
         ]);
     }
     
     elseif (isset($_POST['gestion_reservation'])) {
-        
-        $requete = $bdd->prepare('UPDATE reservation SET statut_resa = :statut_resa WHERE id = :id');
+
+        $prix_resa = $bdd->prepare("SELECT prix_resa FROM reservations WHERE id = :id_resa");
+        $prix_resa->execute(['id_resa' => $_POST['id_resa']]);
+        $prix_resa = $prix_resa->fetch(PDO::FETCH_ASSOC);
+
+        if ($_POST['statut_resa'] == "validee") {
+            $requete = $bdd->prepare('UPDATE utilisateurs SET fidelite = fidelite + :point_gagne WHERE id = :id');
+            $requete->execute([
+                'point_gagne' => $prix_resa['prix_resa'], //1€ = 1 point de fidélité
+                'id' => $_POST['id_resa'],
+            ]);
+           
+        }
+        $requete = $bdd->prepare('UPDATE reservations SET statut_resa = :statut_resa WHERE id = :id');
         $requete->execute([
             'id' => $_POST['id_resa'],
             'statut_resa' => $_POST['statut_resa']
@@ -33,8 +55,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$requete_reservations = $bdd->query("SELECT * FROM reservations");
-$reservations = $requete_reservations->fetchAll(PDO::FETCH_ASSOC);
+$reservations_attente = $bdd->query("SELECT * FROM reservations WHERE statut_resa = 'en attente'");
+$reservations_attente = $reservations_attente->fetchAll(PDO::FETCH_ASSOC);
+
+$reservations_termine = $bdd->query("SELECT * FROM reservations WHERE NOT statut_resa = 'en attente'");
+$reservations_termine = $reservations_termine->fetchAll(PDO::FETCH_ASSOC);
 
 $clients = $bdd->query("SELECT * FROM utilisateurs WHERE id_role = 1");
 $clients = $clients->fetchAll(PDO::FETCH_ASSOC);
@@ -111,7 +136,7 @@ $produits = $produits->fetchAll(PDO::FETCH_ASSOC);
         <!-- Menu deroulant reservation -->
 
         <select class="w3-select w3-border" name="id_resa" required>
-        <?php foreach ($reservations as $reservation) : ?>
+        <?php foreach ($reservations_attente as $reservation) : ?>
             <option value="<?= $reservation['id'] ?>"><?= htmlspecialchars($reservation['id'])?></option>
         <?php endforeach; ?>
         
@@ -119,11 +144,12 @@ $produits = $produits->fetchAll(PDO::FETCH_ASSOC);
         </select>
         
             <input class="w3-radio" type="radio" name="statut_resa" value="validée" required>
-            <span>Validé</span>
+            <span>Valider</span>
         
         
             <input class="w3-radio" type="radio" name="statut_resa" value="refusée" required>
-            <span>Refusé</span>
+            <span>Refuser</span>
+
         
         
 
@@ -134,7 +160,7 @@ $produits = $produits->fetchAll(PDO::FETCH_ASSOC);
 
 <div class="container">
   
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Réservations Produits Clients</span></h5>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Réservations en attente des clients</span></h5>
 
     <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
         <thead>
@@ -148,7 +174,46 @@ $produits = $produits->fetchAll(PDO::FETCH_ASSOC);
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($reservations as $reservation): 
+            <?php foreach ($reservations_attente as $reservation): 
+            // recuperation du nom du produit a partir de l'id 
+                $nom_produit_resa = $bdd->prepare("SELECT nom FROM produits WHERE id = :id_produit");
+                $nom_produit_resa->execute(['id_produit' => $reservation['id_produit']]);
+                $nom_produit_resa = $nom_produit_resa->fetch(PDO::FETCH_ASSOC);
+
+                $produit_client = $bdd->prepare("SELECT nom, prenom FROM utilisateurs WHERE id = :id_client");
+                $produit_client->execute(['id_client' => $reservation['id_client']]);
+                $produit_client = $produit_client->fetch(PDO::FETCH_ASSOC);
+            ?>
+            <tr>
+                <td style="border: 1px solid #ccc; text-align: center;"><?= htmlspecialchars($reservation['id']); ?></td>
+                <td style="border: 1px solid #ccc;"><?= htmlspecialchars($nom_produit_resa['nom']); ?></td>
+                <td style="border: 1px solid #ccc;"><?= htmlspecialchars($produit_client['nom']) . " " . htmlspecialchars($produit_client['prenom']); ?></td>
+                <td style="border: 1px solid #ccc; text-align: center;"><?= htmlspecialchars($reservation['quantite']); ?></td>
+                <td style="border: 1px solid #ccc;"><?= htmlspecialchars($reservation['date_resa']); ?></td>
+                <td style="border: 1px solid #ccc; text-align: center;"><?= htmlspecialchars($reservation['statut_resa']); ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+  
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Réservations terminées des clients</span></h5>
+
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <thead>
+            <tr style="background: grey;">
+                <th >ID</th>
+                <th >Nom</th>
+                <th >Client</th>
+                <th >Quantité</th>
+                <th >Date</th>
+                <th >Statut</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($reservations_termine as $reservation): 
             // recuperation du nom du produit a partir de l'id 
                 $nom_produit_resa = $bdd->prepare("SELECT nom FROM produits WHERE id = :id_produit");
                 $nom_produit_resa->execute(['id_produit' => $reservation['id_produit']]);

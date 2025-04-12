@@ -11,16 +11,25 @@ $bdd = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, 
 
 
 ##### MATIERES PREMIERES ########
+if (isset($_SESSION['id_user']) and isset($_SESSION['role'])) {
+  if ($_SESSION['role'] != "brasseur"){
+     header("Location: connexion.php");
+  }
+} else {
+  header("Location: connexion.php");
+}
 
 if (isset($_POST['ajouter'])) {
     $nom = $_POST['nom'];
     $quantite = $_POST['quantite'];
+    $prix = $_POST['prix'];
 
-    $stmt = $bdd->prepare("INSERT INTO matieres_premieres (nom, quantite) VALUES (:nom, :quantite)");
+    $stmt = $bdd->prepare("INSERT INTO matieres_premieres (nom, quantite, prix) VALUES (:nom, :quantite, :prix)");
     $stmt->execute(
         [
             'nom' => $nom,
             'quantite' => $quantite,
+            'prix' => $prix
         ]);
     }
 
@@ -28,13 +37,15 @@ if (isset($_POST['modifier'])) {
     $id = $_POST['id'];
     $nom = $_POST['nom'];
     $quantite = $_POST['quantite'];
+    $prix = $_POST['prix'];
 
-    $requete = $bdd->prepare("UPDATE matieres_premieres SET nom = :nom, quantite = :quantite WHERE id = :id");
+    $requete = $bdd->prepare("UPDATE matieres_premieres SET nom = :nom, quantite = :quantite, prix = :prix WHERE id = :id");
     $requete->execute(
         [
         'nom' => $nom,
         'quantite' => $quantite,
-        'id' => $id
+        'id' => $id,
+        'prix' => $prix
         ]);
     }
 
@@ -228,6 +239,7 @@ $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
     <form method="post" class="add-form">
       <p><input class="w3-input w3-padding-16 w3-border" type="text" name="nom" placeholder="Nom" required></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="number" name="quantite" placeholder="Quantité" required></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" name="prix" placeholder="Prix total" required></p>
       <p><button class="w3-button w3-brown w3-block" type="submit" name="ajouter">Ajouter au stock</button></p>
     </form>
 
@@ -241,6 +253,7 @@ $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
               <input type='hidden' name='id' value='<?= $matieres['id'] ?>'>
               <input type='text' name='nom' value='<?= htmlspecialchars($matieres['nom']) ?>' placeholder='Nom' required>
               <input type='number' name='quantite' value='<?= htmlspecialchars($matieres['quantite']) ?>' step='any' placeholder='Quantité' required>
+              <input type='number' name='prix' value='<?= htmlspecialchars($matieres['prix']) ?>' step='any' placeholder='Prix total' required>
               <button class='w3-button w3-brown' type='submit' name='modifier'>Modifier</button>
           </form>
 
@@ -260,7 +273,7 @@ $stock_produits_finis = $requete2->fetchAll(PDO::FETCH_ASSOC);
       <textarea class="w3-input w3-padding-16 w3-border" name="description_produits_finis" id="description_produits_finis" placeholder="description" style="width: 100%; height: 100px; resize: none;"></textarea>
       <p><input class="w3-input w3-padding-16 w3-border" type="number" name="prix_produits_finis" placeholder="prix unitaire" required></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="number" name="quantite_produits_finis" placeholder="quantité" required></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" name="image_produits_finis" placeholder=image" required></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" name="image_produits_finis" placeholder="image" required></p>
 
       <p><button class="w3-button w3-brown w3-block" type="submit" name="ajouter_produits_finis">Ajouter au stock</button></p>
     </form>

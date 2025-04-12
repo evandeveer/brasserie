@@ -9,22 +9,55 @@ date_default_timezone_set('Europe/Paris');
 
 $bdd = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
 
+if (isset($_SESSION['id_user']) and isset($_SESSION['role'])) {
+  if ($_SESSION['role'] != "client"){
+     header("Location: connexion.php");
+  }
+} else {
+  header("Location: connexion.php");
+}
+
+$id_client = $_SESSION['id_user'];
+
 $requete_fidelite = $bdd->prepare("SELECT fidelite FROM utilisateurs WHERE id = :id_client");
 $requete_fidelite->execute(['id_client' => $id_client]);
 $fidelite = $requete_fidelite->fetch(PDO::FETCH_ASSOC);
 
 
 if (isset($_POST['ajouter_reservation'])) {
-    $id_produit = $_POST['id_produit'];
-    $quantite = $_POST['quantite'];
+  $id_produit = $_POST['id_produit'];
+  $quantite = $_POST['quantite'];
 
-    $insert_resa = $bdd->prepare("INSERT INTO reservations (id_client, id_produit, quantite, date_resa, statut_resa) 
-                            VALUES (:id_client, :id_produit, :quantite, :date_resa, 'en attente')");
+   
+      $requete_produit = $bdd->prepare("SELECT quantite FROM produits WHERE id = :id_produit");
+      $requete_produit->execute(['id_produit' => $id_produit]);
+      $produit = $requete_produit->fetch(PDO::FETCH_ASSOC);
+  
+  
+      if ($quantite > $produit['quantite']) {
+          header("Location: client.php?erreur=stock_insuffisant");
+          exit();
+      }
+
+  $requete_prix = $bdd->prepare("SELECT prix FROM produits WHERE id = :id_produit");
+  $requete_prix->execute(['id_produit' => $id_produit]);
+  $requete_prix = $requete_prix->fetch(PDO::FETCH_ASSOC);
+  $prix = $requete_prix['prix'];
+
+    $insert_resa = $bdd->prepare("INSERT INTO reservations (id_client, id_produit, quantite, date_resa, statut_resa, prix_resa) 
+                            VALUES (:id_client, :id_produit, :quantite, :date_resa, 'en attente', :prix_resa)");
     $insert_resa->execute([
         'id_client' => $id_client,
         'id_produit' => $id_produit,
         'date_resa' => date('Y-m-d H:i:s'),
         'quantite' => $quantite,
+        'prix_resa' => $prix * $quantite
+    ]);
+
+    $update_quantite = $bdd->prepare("UPDATE produits SET quantite = quantite - :quantite WHERE id = :id_produit");
+    $update_quantite->execute([
+        'quantite' => $quantite,
+        'id_produit' => $id_produit
     ]);
 }
 
@@ -143,28 +176,61 @@ $produits = $produits_query->fetchAll(PDO::FETCH_ASSOC);
 
 
 <div class="container">
-
     <h2 class="w3-tag w3-wide">Réservation de Produits</h2>
     <form method="post">
-
       <div class="form-group">
         <label for="id_produit">Choisir un produit :</label>
-        <select name="id_produit" class="w3-input w3-padding-16 w3-border" required>
+        <select name="id_produit" id="id_produit" class="w3-input w3-padding-16 w3-border" required>
           <?php foreach ($produits as $produit): ?>
-            <option value="<?= $produit['id']; ?>"><?= $produit['nom']; ?> (Quantité disponible: <?= $produit['quantite']; ?>)</option>
+            <option value="<?= $produit['id']; ?>" data-prix="<?= $produit['prix']; ?>">
+              <?= $produit['nom']; ?> (Quantité disponible: <?= $produit['quantite']; ?> - Prix: <?= $produit['prix']; ?>€)
+            </option>
           <?php endforeach; ?>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="id_produit">Quantité :</label>
-        <input class="w3-input w3-padding-16 w3-border" type="number" name="quantite" placeholder= "0" min="1" required>
-      </div>
-      <button type="submit" name="ajouter_reservation" class="w3-button w3-brown w3-block">Réserver</button>
+        <label for="quantite">Quantité :</label>
+        <input class="w3-input w3-padding-16 w3-border" type="number" id="quantite" name="quantite" placeholder="0" min="1" required>
 
+      </div>
+      
+      <div class="form-group">
+        <label>Total :</label>
+        <div id="total" class="w3-panel w3-border w3-padding">0 €</div>
+      </div>
+
+      <?php
+          if (isset($_GET['erreur'])) {
+              echo '<div class="w3-panel w3-red w3-padding">Stock insuffisant pour cette quantité.</div>';
+          }
+          ?>
+      
+      <button type="submit" name="ajouter_reservation" class="w3-button w3-brown w3-block">Réserver</button>
+      
     </form>
 </div>
 
+<!-- calculer le total quantite / produit -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selectProduit = document.getElementById('id_produit');
+    const inputQuantite = document.getElementById('quantite');
+    const divTotal = document.getElementById('total');
+    
+    function calculerTotal() {
+        const prix = parseFloat(selectProduit.options[selectProduit.selectedIndex].getAttribute('data-prix'));
+        const quantite = parseInt(inputQuantite.value) || 0;
+        const total = prix * quantite;
+        divTotal.textContent = total.toFixed(2) + ' €';
+    }
+    
+    selectProduit.addEventListener('change', calculerTotal);
+    inputQuantite.addEventListener('input', calculerTotal);
+    
+    calculerTotal();
+});
+</script>
 
 
 <div class="container">
@@ -182,6 +248,7 @@ $produits = $produits_query->fetchAll(PDO::FETCH_ASSOC);
         <p><strong>Quantité :</strong> <?= htmlspecialchars($reservation['quantite']); ?></p>
         <p><strong>Date de réservation :</strong> <?= htmlspecialchars($reservation['date_resa']); ?></p>
         <p><strong>Statut :</strong> <?= htmlspecialchars($reservation['statut_resa']); ?></p>
+        <p><strong>Prix total :</strong> <?= htmlspecialchars($reservation['prix_resa']); ?> €</p>
       </div>
     <?php endforeach; ?>
 </div>

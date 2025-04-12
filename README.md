@@ -17,7 +17,7 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 | Brasseur   | brasseur@gmail.com       | 1234         |
 | Direction  | direction@gmail.com      | 1234         |
 | Caissier   | caissier@gmail.com          | 1234            |
-| Client     | jean@jean.jean           | 1234         |
+| Client     | jean@gmail.com          | 1234         |
 
 ---
 

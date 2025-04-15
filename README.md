@@ -111,15 +111,15 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 ### `Structure du site :`
 
 /
-├── admin.php
-├── brasseur.php
-├── caissier.php
-├── client.php
-├── connexion.php
-├── connexion_redirection.php
-├── contact_redirection.php
-├── deconnexion.php
-├── direction.php
-├── index.php
-└── Logs.php
+├── admin.php/
+├── brasseur.php/
+├── caissier.php/
+├── client.php/
+├── connexion.php/
+├── connexion_redirection.php/
+├── contact_redirection.php/
+├── deconnexion.php/
+├── direction.php/
+├── index.php/
+└── Logs.php/
 

@@ -44,6 +44,7 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 | id       | int UNSIGNED   | Identifiant unique            |
 | nom      | varchar(25)    | Nom de la matière première    |
 | quantite | decimal(10,2)  | Quantité disponible           |
+| date_achat | datetime  | Date d'achat du stock           |
 
 ---
 

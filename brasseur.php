@@ -24,12 +24,13 @@ if (isset($_POST['ajouter'])) {
     $quantite = $_POST['quantite'];
     $prix = $_POST['prix'];
 
-    $stmt = $bdd->prepare("INSERT INTO matieres_premieres (nom, quantite, prix) VALUES (:nom, :quantite, :prix)");
+    $stmt = $bdd->prepare("INSERT INTO matieres_premieres (nom, quantite, prix, date_achat) VALUES (:nom, :quantite, :prix, date_achat)");
     $stmt->execute(
         [
             'nom' => $nom,
             'quantite' => $quantite,
             'prix' => $prix
+            'date_achat' => date('Y-m-d H:i:s')
         ]);
     }
 

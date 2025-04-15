@@ -110,7 +110,7 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 ### `Structure du site :`
 
-/
+
 ├── admin.php  
 ├── brasseur.php  
 ├── caissier.php  

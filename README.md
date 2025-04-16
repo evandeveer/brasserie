@@ -7,7 +7,14 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 - 🌐 Site : http://evan-epsi.rf.gd/  
 - 📌 Trello : [Lien vers le Trello](https://trello.com/invite/b/67b482c7e2d7bd00ed8d61ba/ATTI356f235c4f3a28d8b89fcd92086fe6874A074E68/brasserie)  
-- 💾 GitHub : https://github.com/evandeveer/brasserie  
+- 💾 GitHub : https://github.com/evandeveer/brasserie
+
+## 🔗 Technologies utilisées
+
+- PHP
+- HTML / CSS TEMPLATE w3School 
+- javascript
+
 
 ## 🔐 Accès de test
 
@@ -125,13 +132,15 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 Fonctionnalités : 
 
-Pouvoir se connecter : 
-<img src="https://github.com/user-attachments/assets/22a68a13-b396-41ce-80c2-867c3edc74a3" alt="Description de l'image" width="500"/>
+# Pouvoir se connecter : 
 
+<div align="center">
+  <div style="display: inline-block; margin: 10px;">
+    <img src="https://github.com/user-attachments/assets/22a68a13-b396-41ce-80c2-867c3edc74a3" alt="Description de l'image" width="500"/>
+    </div>
+</div>
 
-# Outils de brassage
-
-# Outils de brassage
+# Brasseur
 
 <div align="center">
   <div style="display: inline-block; margin: 10px;">

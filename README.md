@@ -132,7 +132,7 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 Fonctionnalités : 
 ## Contact : 
-l'utilisateur remplis le formulaire puis l'envoie, les données sont enregistrées en base de donnée
+l'utilisateur rempli le formulaire puis l'envoie, les données sont enregistrées en base de donnée
 <div>
   <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/6b10ec47-3b53-43ef-8a98-80b889121000" alt="Description de l'image"/>
@@ -141,7 +141,7 @@ l'utilisateur remplis le formulaire puis l'envoie, les données sont enregistré
 </div>
 
 ## Connexion : 
-l'utilisateur remplis le formulaire puis l'envoie. Le mdp hashé ainsi que l'email est comparé avec les données de la table utilisateur pour en trouver un sinon la connexion echoue. Autrement on stock l'id user dans la session utilisateur
+l'utilisateur rempli le formulaire puis l'envoie. Le mdp hashé ainsi que l'email est comparé avec les données de la table utilisateur pour en trouver un sinon la connexion echoue. Autrement on stock l'id user dans la session utilisateur
 <div>
   <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Description de l'image"/>
@@ -154,7 +154,7 @@ l'utilisateur remplis le formulaire puis l'envoie. Le mdp hashé ainsi que l'ema
 
 ## Brasserie : 
 
-l'utilisateur remplis le formulaire puis l'envoie. Un calcul est ensuite fait puis affiche les differents resultats.
+l'utilisateur rempli le formulaire puis l'envoie. Un calcul est ensuite fait puis affiche les differents resultats.
 <div>
   <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/49c2a146-6a10-41c8-8827-3e923c2ba097" alt="Description de l'image"  width="600"/>

@@ -126,7 +126,19 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 Fonctionnalités : 
 
 Pouvoir se connecter : 
-
 <img src="https://github.com/user-attachments/assets/22a68a13-b396-41ce-80c2-867c3edc74a3" alt="Description de l'image" width="500"/>
+
+Outils de brassage
+<img src="https://github.com/user-attachments/assets/d1c39708-945f-41f2-aeff-be0d7600a4f5" alt="Description de l'image" width="500"/>
+
+Gerer les stocks de matieres premières 
+<img src="https://github.com/user-attachments/assets/7bb3429e-27da-40c6-96aa-dac676d7c4a8" alt="Description de l'image" width="500"/>
+
+Gerer les produits finis prets à la vente 
+<img src="https://github.com/user-attachments/assets/882bb022-4574-4c08-a876-439ab8de37be" alt="Description de l'image" width="500"/>
+
+
+
+
 
 

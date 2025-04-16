@@ -150,23 +150,35 @@ l'utilisateur remplis le formulaire puis l'envoie. Le mdp hashé ainsi que l'ema
 
 
 
+## Brasserie : 
 
-
-# Brasseur
-
-
-  <div style="display: inline-block; float: right; margin: 10px;">
-    <img src="https://github.com/user-attachments/assets/d1c39708-945f-41f2-aeff-be0d7600a4f5" alt="Outils de brassage" width="500"/>
-    <p>Outils de brassage</p>
-  </div>
+l'utilisateur remplis le formulaire puis l'envoie. Un calcul est ensuite fait puis affiche les differents resultats.
+<div align="center">
   <div style="display: inline-block; margin: 10px;">
-    <img src="https://github.com/user-attachments/assets/7bb3429e-27da-40c6-96aa-dac676d7c4a8" alt="Gérer les stocks de matières premières" width="500"/>
-    <p>Gérer les stocks de matières premières</p>
-  </div>
+    <img src="https://github.com/user-attachments/assets/49c2a146-6a10-41c8-8827-3e923c2ba097" alt="Description de l'image"/>
+    </div>
+</div>
+
+l'utilisateur remplis le formulaire puis l'envoie. Un calcul est ensuite fait puis affiche les differents resultats.
+<div align="center">
   <div style="display: inline-block; margin: 10px;">
-    <img src="https://github.com/user-attachments/assets/882bb022-4574-4c08-a876-439ab8de37be" alt="Gérer les produits finis prêts à la vente" width="500"/>
-    <p>Gérer les produits finis prêts à la vente</p>
-  </div>
+    <img src="https://github.com/user-attachments/assets/49c2a146-6a10-41c8-8827-3e923c2ba097" alt="Description de l'image"/>
+    </div>
+</div>
+
+Le brasseur peut gerer les stocks des matières premieres. Il peut en ajouter, modifier ou supprimer.
+  <div style="display: inline-block; margin: 10px;">
+    <img src="https://github.com/user-attachments/assets/c3b7a3dd-65d0-4a4d-9ac8-1b6b6699aa17" alt="Description de l'image"/>
+    </div>
+</div>
+
+Le brasseur peut gerer les stocks des produits finis pret à la vente. Il peut en ajouter, modifier ou supprimer.
+  <div style="display: inline-block; margin: 10px;">
+    <img src="https://github.com/user-attachments/assets/87a8c611-8293-4265-9b4b-e14450b91de3" alt="Description de l'image"/>
+    </div>
+</div>
+
+
 
 
 

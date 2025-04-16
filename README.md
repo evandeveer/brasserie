@@ -276,7 +276,7 @@ Documentation sessions : https://www.php.net/manual/fr/reserved.variables.sessio
 Documentation fichier txt : https://www.conseil-webmaster.com/formation/php/10-manipuler-fichier-php.php  
 Template CSS : https://www.w3schools.com/w3css/tryw3css_templates_cafe.htm  
 Les bases PHP et html : Cours Thibault Vinchent EPSI https://www.je-code.com/
-
+IA : https://chat.deepseek.com/ ou https://chatgpt.com/
 
 
 

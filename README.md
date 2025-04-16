@@ -270,12 +270,12 @@ Un affichage des logs et aussi present dans la page admin.
 <img src="https://github.com/user-attachments/assets/9e0a18bb-f598-494d-a9ab-e3a29756a6d6" alt="Ajout Utilisateur" width="600"/>
 
 
-# 📦 **Sources**
+# 🔎 **Sources**
 
 Documentation sessions : https://www.php.net/manual/fr/reserved.variables.session.php  
 Documentation fichier txt : https://www.conseil-webmaster.com/formation/php/10-manipuler-fichier-php.php  
 Template CSS : https://www.w3schools.com/w3css/tryw3css_templates_cafe.htm  
-Les bases PHP et html : Cours Thibault Vinchent EPSI https://www.je-code.com/
+Les bases PHP et html : Cours Thibault Vinchent EPSI https://www.je-code.com/  
 IA : https://chat.deepseek.com/ ou https://chatgpt.com/
 
 

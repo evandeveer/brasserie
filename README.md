@@ -131,9 +131,15 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 └── Logs.php  
 
 Fonctionnalités : 
+## Contact : 
+l'utilisateur remplis le formulaire puis l'envoie, les données sont enregistrer en base de donnée
+<div align="center">
+  <div style="display: inline-block; margin: 10px;">
+    <img src="https://github.com/user-attachments/assets/6b10ec47-3b53-43ef-8a98-80b889121000" alt="Description de l'image"/>
+    </div>
+</div>
 
-# Connexion : 
-
+## Connexion : 
 l'utilisateur remplis le formulaire puis l'envoie, le mdp hashé ainsi que l'email est comparé avec les données de la table utilisateur pour en trouver un sinon connexion echoué
 <div align="center">
   <div style="display: inline-block; margin: 10px;">

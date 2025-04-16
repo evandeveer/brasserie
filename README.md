@@ -123,3 +123,8 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 ├── index.php  
 └── Logs.php  
 
+Fonctionnalités : 
+
+Pouvoir se connecter : 
+
+![image](https://github.com/user-attachments/assets/5c936453-65ec-43b6-9c38-d7b8dc7f9e86)

@@ -145,7 +145,7 @@ Fonctionnalités :
 # Brasseur
 
 
-  <div style="display: inline-block; float: left; margin: 10px;">
+  <div style="display: inline-block; float: right; margin: 10px;">
     <img src="https://github.com/user-attachments/assets/d1c39708-945f-41f2-aeff-be0d7600a4f5" alt="Outils de brassage" width="500"/>
     <p>Outils de brassage</p>
   </div>

@@ -195,6 +195,7 @@ Ainsi que gerer un utilisateur en modifiant des données ou en supprimant le com
 
 
 ## Direction :
+
 L'utilisateur peut voir les commandes passés donc celles qui ont été validées par le caissier avec toutes les informations nécéssaires, avec les matières premières achetés et le bénéfice total.
 <div>
   <div style="display: inline-block;">
@@ -204,6 +205,7 @@ L'utilisateur peut voir les commandes passés donc celles qui ont été validée
 </div>
 
 ## Caissier :
+
 Le caissier peut ajouter un utilisateur, peut confirmer une commande et voir les réservation des clients en attente.
   <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/9881eb4e-d4ac-4a23-a3e4-0fe8e8bac6d3" alt="Description de l'image" width="600/>
@@ -212,7 +214,9 @@ Le caissier peut ajouter un utilisateur, peut confirmer une commande et voir les
   </div>
 </div>
 
+
 ## Client :
+
 Le client peut réserver un produit, accéder à la liste des produits et suivre ses commandes.
   <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/0bf4f6b2-14a6-46ab-8c22-b4342ab0c56b" alt="Description de l'image" width="800/>

@@ -11,9 +11,9 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 ## 🔗 Technologies utilisées
 
-- PHP
+- PHP - javascript
 - HTML / CSS TEMPLATE w3School 
-- javascript
+- MySQl / PhpMyAdmin
 
 
 ## 🔐 Accès de test
@@ -136,7 +136,7 @@ l'utilisateur rempli le formulaire puis l'envoie, les données sont enregistrée
 <div>
   <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/6b10ec47-3b53-43ef-8a98-80b889121000" alt="Description de l'image"/>
-    <img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Description de l'image" width="300"/>
+    <img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Description de l'image" width="400"/>
     </div>
 </div>
 
@@ -146,7 +146,7 @@ l'utilisateur rempli le formulaire puis l'envoie. Le mdp hashé ainsi que l'emai
   <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Description de l'image"/>
     <img src="https://github.com/user-attachments/assets/0fe2a821-5cc4-458b-9860-4305cde83d8c" alt="Description de l'image"/>
-      <img src="https://github.com/user-attachments/assets/08b3e02e-4e8a-47d6-b00a-e9fb36e9a3c9" alt="Description de l'image" width="300"/>
+      <img src="https://github.com/user-attachments/assets/08b3e02e-4e8a-47d6-b00a-e9fb36e9a3c9" alt="Description de l'image" width="500"/>
     </div>
 </div>
 
@@ -177,6 +177,55 @@ Le brasseur peut gerer les stocks des produits finis pret à la vente. Il peut e
 </div>
 
 
+## Admin : 
+
+Nous pouvons ajouter un utilisateur, dont le mot de pass sera par default 1234 mais hashé (md5) en base de donnée
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/11af3073-f3ff-4009-8fe2-bfb0589b2b39" alt="Description de l'image" width="800"/>
+    <img src="https://github.com/user-attachments/assets/5c7278ee-8070-4697-9f96-3b818529e373" alt="Description de l'image"  width="800"/>
+    </div>
+</div>
+
+Ainsi que gerer un utilisateur en modifiant des données ou en supprimant le compte.
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/0d5bfd2c-612b-4960-bd37-2464b248259f" alt="Description de l'image" width="800"/>
+    <img src="https://github.com/user-attachments/assets/f31cc96c-e57b-4fb3-bf4f-d7c90bb9fb4c" alt="Description de l'image"  width="800"/>
+    </div>
+</div>
+
+
+## Direction :
+
+L'utilisateur peut voir les commandes passés donc celles qui ont été validées par le caissier avec toutes les informations nécéssaires, avec les matières premières achetés et le bénéfice total.
+<div>
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/ff705df1-ebbb-46ce-892f-505741e90739" alt="Description de l'image"/>
+    <img src="https://github.com/user-attachments/assets/7f59376f-1425-4dbe-90cb-14c12ebfcd84" alt="Description de l'image" width="400/>
+    </div>
+</div>
+
+## Caissier :
+
+Le caissier peut ajouter un utilisateur, peut confirmer une commande et voir les réservation des clients en attente.
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/9881eb4e-d4ac-4a23-a3e4-0fe8e8bac6d3" alt="Description de l'image" width="600/>
+    <img src="https://github.com/user-attachments/assets/6dfadde7-a4a0-4ad7-a675-fdbe7a5807e4" alt="Description de l'image" width="600/>
+    <img src="https://github.com/user-attachments/assets/318e4f44-b6e3-4b54-8662-dcc9abdc83cd" alt="Description de l'image" width="600/>
+  </div>
+</div>
+
+
+## Client :
+
+Le client peut réserver un produit, accéder à la liste des produits et suivre ses commandes.
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/0bf4f6b2-14a6-46ab-8c22-b4342ab0c56b" alt="Description de l'image" width="800/>
+    <img src="https://github.com/user-attachments/assets/f52b718a-c305-417f-bb38-f054d091d756" alt="Description de l'image" width="800/>
+    <img src="https://github.com/user-attachments/assets/b48114be-597c-4ca1-8ee3-c46642f2ca21" alt="Description de l'image" width="800/>
+    <img src="https://github.com/user-attachments/assets/db109025-3ed3-4177-8b81-76851c2dd917" alt="Description de l'image" width="800/>
+    <img src="https://github.com/user-attachments/assets/79d67f87-5833-477a-93d0-d31ec30265f8" alt="Description de l'image" width="800/>
+  </div>
+</div>
 
 
 

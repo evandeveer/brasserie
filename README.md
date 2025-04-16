@@ -132,20 +132,21 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 Fonctionnalités : 
 ## Contact : 
-l'utilisateur remplis le formulaire puis l'envoie, les données sont enregistrer en base de donnée
-<div align="center">
-  <div style="display: inline-block; margin: 10px;">
+l'utilisateur remplis le formulaire puis l'envoie, les données sont enregistrées en base de donnée
+<div>
+  <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/6b10ec47-3b53-43ef-8a98-80b889121000" alt="Description de l'image"/>
-    <img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Description de l'image"/>
+    <img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Description de l'image" width="300"/>
     </div>
 </div>
 
 ## Connexion : 
 l'utilisateur remplis le formulaire puis l'envoie. Le mdp hashé ainsi que l'email est comparé avec les données de la table utilisateur pour en trouver un sinon la connexion echoue. Autrement on stock l'id user dans la session utilisateur
-<div align="center">
-  <div style="display: inline-block; margin: 10px;">
+<div>
+  <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Description de l'image"/>
     <img src="https://github.com/user-attachments/assets/0fe2a821-5cc4-458b-9860-4305cde83d8c" alt="Description de l'image"/>
+      <img src="https://github.com/user-attachments/assets/08b3e02e-4e8a-47d6-b00a-e9fb36e9a3c9" alt="Description de l'image" width="300"/>
     </div>
 </div>
 
@@ -154,30 +155,28 @@ l'utilisateur remplis le formulaire puis l'envoie. Le mdp hashé ainsi que l'ema
 ## Brasserie : 
 
 l'utilisateur remplis le formulaire puis l'envoie. Un calcul est ensuite fait puis affiche les differents resultats.
-<div align="center">
-  <div style="display: inline-block; margin: 10px;">
-    <img src="https://github.com/user-attachments/assets/49c2a146-6a10-41c8-8827-3e923c2ba097" alt="Description de l'image"/>
-    </div>
-</div>
-
-l'utilisateur remplis le formulaire puis l'envoie. Un calcul est ensuite fait puis affiche les differents resultats.
-<div align="center">
-  <div style="display: inline-block; margin: 10px;">
-    <img src="https://github.com/user-attachments/assets/49c2a146-6a10-41c8-8827-3e923c2ba097" alt="Description de l'image"/>
+<div>
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/49c2a146-6a10-41c8-8827-3e923c2ba097" alt="Description de l'image"  width="600"/>
+        <img src="https://github.com/user-attachments/assets/5237355e-3dc0-450a-8b5a-a88742a04d74" alt="Description de l'image" width="500"/>
     </div>
 </div>
 
 Le brasseur peut gerer les stocks des matières premieres. Il peut en ajouter, modifier ou supprimer.
-  <div style="display: inline-block; margin: 10px;">
-    <img src="https://github.com/user-attachments/assets/c3b7a3dd-65d0-4a4d-9ac8-1b6b6699aa17" alt="Description de l'image"/>
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/c3b7a3dd-65d0-4a4d-9ac8-1b6b6699aa17" alt="Description de l'image" width="600"/>
+     <img src="https://github.com/user-attachments/assets/53cbfb59-a5ef-4ee5-aa12-e05c0b6d0d23" alt="Description de l'image" width="500"/>
     </div>
 </div>
 
 Le brasseur peut gerer les stocks des produits finis pret à la vente. Il peut en ajouter, modifier ou supprimer.
-  <div style="display: inline-block; margin: 10px;">
-    <img src="https://github.com/user-attachments/assets/87a8c611-8293-4265-9b4b-e14450b91de3" alt="Description de l'image"/>
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/87a8c611-8293-4265-9b4b-e14450b91de3" alt="Description de l'image"  width="600"/>
+    <img src="https://github.com/user-attachments/assets/bad84a5b-be7e-41c0-b827-95b69b3396c8" alt="Description de l'image" width="500"/>
     </div>
 </div>
+
+
 
 
 

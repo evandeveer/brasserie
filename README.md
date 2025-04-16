@@ -140,10 +140,12 @@ Fonctionnalités :
     </div>
 </div>
 
+
+
 # Brasseur
 
-<div align="center">
-  <div style="display: inline-block; margin: 10px;">
+
+  <div style="display: inline-block; float: left; margin: 10px;">
     <img src="https://github.com/user-attachments/assets/d1c39708-945f-41f2-aeff-be0d7600a4f5" alt="Outils de brassage" width="500"/>
     <p>Outils de brassage</p>
   </div>
@@ -155,7 +157,7 @@ Fonctionnalités :
     <img src="https://github.com/user-attachments/assets/882bb022-4574-4c08-a876-439ab8de37be" alt="Gérer les produits finis prêts à la vente" width="500"/>
     <p>Gérer les produits finis prêts à la vente</p>
   </div>
-</div>
+
 
 
 

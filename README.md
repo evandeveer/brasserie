@@ -132,13 +132,16 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 Fonctionnalités : 
 
-# Pouvoir se connecter : 
+# Connexion : 
+
 
 <div align="center">
   <div style="display: inline-block; margin: 10px;">
-    <img src="https://github.com/user-attachments/assets/22a68a13-b396-41ce-80c2-867c3edc74a3" alt="Description de l'image" width="500"/>
+    <img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Description de l'image" width="500"/>
+    l'utilisateur remplis le formulaire puis l'envoie, le mdp hashé ainsi que l'email est comparé avec les données de la table utilisateur pour en trouver un sinon connexion echoué
     </div>
 </div>
+
 
 
 

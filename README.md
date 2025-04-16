@@ -130,7 +130,9 @@ Pouvoir se connecter :
 
 # Outils de brassage
 
-<div style="display: flex; justify-content: space-between;">
+# Outils de brassage
+
+<div style="display: flex; justify-content: space-around; align-items: center;">
   <div style="text-align: center;">
     <img src="https://github.com/user-attachments/assets/d1c39708-945f-41f2-aeff-be0d7600a4f5" alt="Outils de brassage" width="300"/>
     <p>Outils de brassage</p>
@@ -144,6 +146,7 @@ Pouvoir se connecter :
     <p>Gérer les produits finis prêts à la vente</p>
   </div>
 </div>
+
 
 
 

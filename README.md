@@ -244,6 +244,7 @@ Et voir les réservations clients.
 <img src="https://github.com/user-attachments/assets/9dddd6af-bbd4-4436-b7d6-35a955c65024" alt="Ajout Utilisateur" width="600"/>
 <img src="https://github.com/user-attachments/assets/7018a50b-a18a-457f-adf9-246b3d25d8c8" alt="Réservations" width="600"/>
 
+---
 
 ## **Systeme de session**
 
@@ -258,9 +259,11 @@ Une fois connecté le role a accès à un bouton special en fonction de son role
 <img src="https://github.com/user-attachments/assets/82cb6378-a7b0-4d20-b3bb-7f7ae4b935bf" alt="Ajout Utilisateur" width="600"/>
 <img src="https://github.com/user-attachments/assets/55e597e9-fb20-4a80-8c3a-89c4f4b3cff5" alt="Ajout Utilisateur" width="600"/>
 
+---
+
 ## **Systeme de Logs**
 
-Une fonction WriteLogs a été creer dans une classe Logs ce qui permet d'appeler la fonction dans n'importe quelle page.
+Une fonction WriteLogs a été créée dans une classe Logs ce qui permet d'appeler la fonction dans n'importe quelle page.
 Un affichage des logs et aussi present dans la page admin.
 
 <img src="https://github.com/user-attachments/assets/58c88fa9-16c0-4b78-9576-6aa15122b86c" alt="Ajout Utilisateur" width="600"/>
@@ -269,9 +272,9 @@ Un affichage des logs et aussi present dans la page admin.
 
 # 📦 **Sources**
 
-Documentation sessions : https://www.php.net/manual/fr/reserved.variables.session.php
-Documentation fichier txt : https://www.conseil-webmaster.com/formation/php/10-manipuler-fichier-php.php
-Template CSS : https://www.w3schools.com/w3css/tryw3css_templates_cafe.htm
+Documentation sessions : https://www.php.net/manual/fr/reserved.variables.session.php  
+Documentation fichier txt : https://www.conseil-webmaster.com/formation/php/10-manipuler-fichier-php.php  
+Template CSS : https://www.w3schools.com/w3css/tryw3css_templates_cafe.htm  
 
 
 

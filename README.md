@@ -128,21 +128,20 @@ Fonctionnalités :
 Pouvoir se connecter : 
 <img src="https://github.com/user-attachments/assets/22a68a13-b396-41ce-80c2-867c3edc74a3" alt="Description de l'image" width="500"/>
 
-# Outils de brassage
 
 # Outils de brassage
 
-<div style="display: flex; justify-content: space-around; align-items: center;">
-  <div style="text-align: center;">
-    <img src="https://github.com/user-attachments/assets/d1c39708-945f-41f2-aeff-be0d7600a4f5" alt="Outils de brassage" width="300"/>
+<div style="display: flex; justify-content: space-evenly; align-items: center;">
+  <div style="text-align: center; width: 30%;">
+    <img src="https://github.com/user-attachments/assets/d1c39708-945f-41f2-aeff-be0d7600a4f5" alt="Outils de brassage" width="100%"/>
     <p>Outils de brassage</p>
   </div>
-  <div style="text-align: center;">
-    <img src="https://github.com/user-attachments/assets/7bb3429e-27da-40c6-96aa-dac676d7c4a8" alt="Gérer les stocks de matières premières" width="300"/>
+  <div style="text-align: center; width: 30%;">
+    <img src="https://github.com/user-attachments/assets/7bb3429e-27da-40c6-96aa-dac676d7c4a8" alt="Gérer les stocks de matières premières" width="100%"/>
     <p>Gérer les stocks de matières premières</p>
   </div>
-  <div style="text-align: center;">
-    <img src="https://github.com/user-attachments/assets/882bb022-4574-4c08-a876-439ab8de37be" alt="Gérer les produits finis prêts à la vente" width="300"/>
+  <div style="text-align: center; width: 30%;">
+    <img src="https://github.com/user-attachments/assets/882bb022-4574-4c08-a876-439ab8de37be" alt="Gérer les produits finis prêts à la vente" width="100%"/>
     <p>Gérer les produits finis prêts à la vente</p>
   </div>
 </div>

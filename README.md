@@ -136,6 +136,7 @@ l'utilisateur remplis le formulaire puis l'envoie, les données sont enregistrer
 <div align="center">
   <div style="display: inline-block; margin: 10px;">
     <img src="https://github.com/user-attachments/assets/6b10ec47-3b53-43ef-8a98-80b889121000" alt="Description de l'image"/>
+    <img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Description de l'image"/>
     </div>
 </div>
 

@@ -27,7 +27,7 @@ if (isset($_POST['ajouter'])) {
     $quantite = $_POST['quantite'];
     $prix = $_POST['prix'];
 
-    $requete = $bdd->prepare("INSERT INTO matieres_premieres (nom, quantite, prix, date_achat) VALUES (:nom, :quantite, :prix, date_achat)");
+    $requete = $bdd->prepare("INSERT INTO matieres_premieres (nom, quantite, prix, date_achat) VALUES (:nom, :quantite, :prix, :date_achat)");
     $requete->execute(
         [
             'nom' => $nom,

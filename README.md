@@ -186,11 +186,12 @@ Nous pouvons ajouter un utilisateur, dont le mot de pass sera par default 1234 m
     </div>
 </div>
 
-
-
-
-
-
+Ainsi que gerer un utilisateur en modifiant des données ou en supprimant le compte.
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/0d5bfd2c-612b-4960-bd37-2464b248259f" alt="Description de l'image" width="800"/>
+    <img src="https://github.com/user-attachments/assets/f31cc96c-e57b-4fb3-bf4f-d7c90bb9fb4c" alt="Description de l'image"  width="800"/>
+    </div>
+</div>
 
 
 

@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 $servername = "sql208.infinityfree.com";
 $username = "if0_38342249";
 $password = "8p8SMDlMUOmSd";
@@ -24,12 +27,12 @@ if (isset($_POST['ajouter'])) {
     $quantite = $_POST['quantite'];
     $prix = $_POST['prix'];
 
-    $stmt = $bdd->prepare("INSERT INTO matieres_premieres (nom, quantite, prix, date_achat) VALUES (:nom, :quantite, :prix, date_achat)");
-    $stmt->execute(
+    $requete = $bdd->prepare("INSERT INTO matieres_premieres (nom, quantite, prix, date_achat) VALUES (:nom, :quantite, :prix, date_achat)");
+    $requete->execute(
         [
             'nom' => $nom,
             'quantite' => $quantite,
-            'prix' => $prix
+            'prix' => $prix,
             'date_achat' => date('Y-m-d H:i:s')
         ]);
     }

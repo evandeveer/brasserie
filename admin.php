@@ -24,7 +24,7 @@ $bdd = new PDO('mysql:host=' . $servername . ';dbname=' . $dbname . ';charset=ut
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['ajouter'])) {
-     
+       
         $requete = $bdd->prepare('INSERT INTO utilisateurs (nom, prenom, email, telephone, mdp, id_role) VALUES (:nom, :prenom, :email, :telephone, :mdp, :id_role)');
         $requete->execute([
             'nom' => $_POST['nom'],

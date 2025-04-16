@@ -32,17 +32,21 @@ if (isset($_POST['email']) and (isset($_POST['mdp']))) {
         ]);
         $role = $requete2->fetch(PDO::FETCH_ASSOC);
 
-        Logs::WriteLogs("Connexion " . $role['role'] ." -> $email");
-
         $_SESSION['id_user'] = $id_user;
         $_SESSION['role'] = $role['role'];
+
+        $ip = $_SERVER['REMOTE_ADDR'];
+
+        Logs::WriteLogs("Connexion " . $role['role'] ." -> $email", $_SERVER['REMOTE_ADDR']);
+
+
         
         header("Location: index.php?message= Bienvenue ". $role['role'] . " " . $nom. " !&role=" . $role['role']);
         
         
     } else {
       
-      Logs::WriteLogs("Login incorrect -> $email");
+      Logs::WriteLogs("Login incorrect -> $email", $_SERVER['REMOTE_ADDR']);
       header("Location: connexion.php?errorConnexion=true");
 
 

@@ -2,13 +2,14 @@
 
 class Logs{
 
-    public static function WriteLogs($logs){
+    public static function WriteLogs($logs, $ip){
 
         date_default_timezone_set('Europe/Paris');
         $date = date('d/m/Y H:i:s');
 
+
         $monfichier = fopen('logs.txt', 'a+');
-        fwrite($monfichier, "$date | $logs <br>\n");
+        fwrite($monfichier, "$date | [$ip] $logs <br>\n");
         fgets($monfichier);
         fclose($monfichier);
     }

@@ -11,9 +11,9 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 ## 🔗 Technologies utilisées
 
-- PHP
+- PHP - javascript
 - HTML / CSS TEMPLATE w3School 
-- javascript
+- MySQl / PhpMyAdmin
 
 
 ## 🔐 Accès de test

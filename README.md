@@ -136,7 +136,7 @@ l'utilisateur rempli le formulaire puis l'envoie, les données sont enregistrée
 <div>
   <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/6b10ec47-3b53-43ef-8a98-80b889121000" alt="Description de l'image"/>
-    <img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Description de l'image" width="300"/>
+    <img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Description de l'image" width="400"/>
     </div>
 </div>
 
@@ -146,7 +146,7 @@ l'utilisateur rempli le formulaire puis l'envoie. Le mdp hashé ainsi que l'emai
   <div style="display: inline-block;">
     <img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Description de l'image"/>
     <img src="https://github.com/user-attachments/assets/0fe2a821-5cc4-458b-9860-4305cde83d8c" alt="Description de l'image"/>
-      <img src="https://github.com/user-attachments/assets/08b3e02e-4e8a-47d6-b00a-e9fb36e9a3c9" alt="Description de l'image" width="300"/>
+      <img src="https://github.com/user-attachments/assets/08b3e02e-4e8a-47d6-b00a-e9fb36e9a3c9" alt="Description de l'image" width="500"/>
     </div>
 </div>
 
@@ -181,8 +181,8 @@ Le brasseur peut gerer les stocks des produits finis pret à la vente. Il peut e
 
 Nous pouvons ajouter un utilisateur, dont le mot de pass sera par default 1234 mais hashé (md5) en base de donnée
   <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/11af3073-f3ff-4009-8fe2-bfb0589b2b39" alt="Description de l'image" width="700"/>
-    <img src="https://github.com/user-attachments/assets/5c7278ee-8070-4697-9f96-3b818529e373" alt="Description de l'image"  width="600"/>
+    <img src="https://github.com/user-attachments/assets/11af3073-f3ff-4009-8fe2-bfb0589b2b39" alt="Description de l'image" width="800"/>
+    <img src="https://github.com/user-attachments/assets/5c7278ee-8070-4697-9f96-3b818529e373" alt="Description de l'image"  width="800"/>
     </div>
 </div>
 

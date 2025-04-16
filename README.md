@@ -177,6 +177,22 @@ Le brasseur peut gerer les stocks des produits finis pret à la vente. Il peut e
 </div>
 
 
+## Admin : 
+
+Nous pouvons ajouter un utilisateur, dont le mot de pass sera par default 1234 mais hashé (md5) en base de donnée
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/11af3073-f3ff-4009-8fe2-bfb0589b2b39" alt="Description de l'image" width="700"/>
+    <img src="https://github.com/user-attachments/assets/5c7278ee-8070-4697-9f96-3b818529e373" alt="Description de l'image"  width="600"/>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 
 
 

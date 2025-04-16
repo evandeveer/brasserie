@@ -196,13 +196,35 @@ Ainsi que gerer un utilisateur en modifiant des données ou en supprimant le com
 
 ## Direction :
 
-L'utilisateur peut voir les commandes passés donc celles qui ont été validées par le caissier avec toutes les informations nécéssaires, avec les matières premières achetés et le bénéfice total.
+La direction peut voir les achats de matieres premieres, les ventes de ses produits, les filtrer en fonction de la date.
 <div>
   <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/ff705df1-ebbb-46ce-892f-505741e90739" alt="Description de l'image"/>
-    <img src="https://github.com/user-attachments/assets/7f59376f-1425-4dbe-90cb-14c12ebfcd84" alt="Description de l'image" width="400/>
+    <img src="https://github.com/user-attachments/assets/2e875e72-d99b-4f7d-855c-3b47b4e02b01" alt="Description de l'image"/>
+    <img src="https://github.com/user-attachments/assets/6a92e475-c306-473f-b41e-09d6bef2d75f" alt="Description de l'image" width="400/>
     </div>
 </div>
+
+Un calcul des depenses et des achats et fait et est affiché pour la direction.
+<div>
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/ddbda3c8-1fa5-405f-b9f2-aa27c464c033" alt="Description de l'image"/>
+    <img src="https://github.com/user-attachments/assets/17e5ea00-18e7-4438-a320-98e3b4c79624" alt="Description de l'image" width="400/>
+    </div>
+</div>
+
+
+## Client :
+
+Le client peut voir ses points de fidelité
+<div>
+  <div style="display: inline-block;">
+    <img src="https://github.com/user-attachments/assets/eafe207f-bf11-415d-bd68-a7be0cf878a8" alt="Description de l'image" width="800/>
+    <img src="https://github.com/user-attachments/assets/0c5c59ad-d7db-4328-9113-c8fca16aca09" alt="Description de l'image" width="800/>
+  </div>
+</div>
+
+
+
 
 ## Caissier :
 
@@ -215,17 +237,7 @@ Le caissier peut ajouter un utilisateur, peut confirmer une commande et voir les
 </div>
 
 
-## Client :
 
-Le client peut réserver un produit, accéder à la liste des produits et suivre ses commandes.
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/0bf4f6b2-14a6-46ab-8c22-b4342ab0c56b" alt="Description de l'image" width="800/>
-    <img src="https://github.com/user-attachments/assets/f52b718a-c305-417f-bb38-f054d091d756" alt="Description de l'image" width="800/>
-    <img src="https://github.com/user-attachments/assets/b48114be-597c-4ca1-8ee3-c46642f2ca21" alt="Description de l'image" width="800/>
-    <img src="https://github.com/user-attachments/assets/db109025-3ed3-4177-8b81-76851c2dd917" alt="Description de l'image" width="800/>
-    <img src="https://github.com/user-attachments/assets/79d67f87-5833-477a-93d0-d31ec30265f8" alt="Description de l'image" width="800/>
-  </div>
-</div>
 
 
 

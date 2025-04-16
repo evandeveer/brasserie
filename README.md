@@ -127,6 +127,6 @@ Fonctionnalités :
 
 Pouvoir se connecter : 
 
-<img src="https://github.com/user-attachments/assets/22a68a13-b396-41ce-80c2-867c3edc74a3" alt="Description de l'image" width="300"/>
+<img src="https://github.com/user-attachments/assets/22a68a13-b396-41ce-80c2-867c3edc74a3" alt="Description de l'image" width="500"/>
 
 

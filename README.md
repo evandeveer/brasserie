@@ -245,6 +245,35 @@ Et voir les réservations clients.
 <img src="https://github.com/user-attachments/assets/7018a50b-a18a-457f-adf9-246b3d25d8c8" alt="Réservations" width="600"/>
 
 
+## **Systeme de session**
+
+Un visiteur du site ne peut pas acceder à une page s'il n'a pas le role (par exemple en tapant "/admin.php")
+grace à la verification de l'id role de la session sur chaque page.
+exemple admin : 
+
+<img src="https://github.com/user-attachments/assets/6627643b-da35-45c5-8080-14bbff6e0981" alt="Ajout Utilisateur" width="600"/>
+
+Une fois connecté le role a accès à un bouton special en fonction de son role qui le redirige vers la page de son role.
+
+<img src="https://github.com/user-attachments/assets/82cb6378-a7b0-4d20-b3bb-7f7ae4b935bf" alt="Ajout Utilisateur" width="600"/>
+<img src="https://github.com/user-attachments/assets/55e597e9-fb20-4a80-8c3a-89c4f4b3cff5" alt="Ajout Utilisateur" width="600"/>
+
+## **Systeme de Logs**
+
+Une fonction WriteLogs a été creer dans une classe Logs ce qui permet d'appeler la fonction dans n'importe quelle page.
+Un affichage des logs et aussi present dans la page admin.
+
+<img src="https://github.com/user-attachments/assets/58c88fa9-16c0-4b78-9576-6aa15122b86c" alt="Ajout Utilisateur" width="600"/>
+<img src="https://github.com/user-attachments/assets/9e0a18bb-f598-494d-a9ab-e3a29756a6d6" alt="Ajout Utilisateur" width="600"/>
+
+
+# 📦 **Sources**
+
+Documentation sessions : https://www.php.net/manual/fr/reserved.variables.session.php
+Documentation fichier txt : https://www.conseil-webmaster.com/formation/php/10-manipuler-fichier-php.php
+Template CSS : https://www.w3schools.com/w3css/tryw3css_templates_cafe.htm
+
+
 
 
 

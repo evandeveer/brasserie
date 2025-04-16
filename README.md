@@ -11,11 +11,14 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 ## 🔗 Technologies utilisées
 
-- PHP - javascript
-- HTML / CSS TEMPLATE w3School 
-- MySQl / PhpMyAdmin
+- Langages : PHP, JavaScript, HTML, CSS (Template W3Schools)
+- Base de données : MySQL (gestion via PhpMyAdmin)
+- Hébergement : InfinityFree.com
+- Transfert de fichiers : FileZilla
+- Éditeur de code : VisualStudioCode
+- Versioning : Github
 
-
+  
 ## 🔐 Accès de test
 
 | Rôle       | Email                    | Mot de passe |

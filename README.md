@@ -137,7 +137,7 @@ Fonctionnalités :
 
 <div align="center">
   <div style="display: inline-block; margin: 10px;">
-    <img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Description de l'image" width="500"/>
+    <img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Description de l'image"/>
     l'utilisateur remplis le formulaire puis l'envoie, le mdp hashé ainsi que l'email est comparé avec les données de la table utilisateur pour en trouver un sinon connexion echoué
     </div>
 </div>

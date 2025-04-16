@@ -144,8 +144,10 @@ l'utilisateur remplis le formulaire puis l'envoie. Le mdp hashé ainsi que l'ema
 <div align="center">
   <div style="display: inline-block; margin: 10px;">
     <img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Description de l'image"/>
+    <img src="https://github.com/user-attachments/assets/0fe2a821-5cc4-458b-9860-4305cde83d8c" alt="Description de l'image"/>
     </div>
 </div>
+
 
 
 

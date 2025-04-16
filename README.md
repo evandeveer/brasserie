@@ -130,111 +130,120 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 ├── index.php  
 └── Logs.php  
 
-Fonctionnalités : 
-## Contact : 
-l'utilisateur rempli le formulaire puis l'envoie, les données sont enregistrées en base de donnée
-<div>
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/6b10ec47-3b53-43ef-8a98-80b889121000" alt="Description de l'image"/>
-    <img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Description de l'image" width="400"/>
-    </div>
-</div>
+# 📦 **Fonctionnalités de l'application**
 
-## Connexion : 
-l'utilisateur rempli le formulaire puis l'envoie. Le mdp hashé ainsi que l'email est comparé avec les données de la table utilisateur pour en trouver un sinon la connexion echoue. Autrement on stock l'id user dans la session utilisateur
-<div>
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Description de l'image"/>
-    <img src="https://github.com/user-attachments/assets/0fe2a821-5cc4-458b-9860-4305cde83d8c" alt="Description de l'image"/>
-      <img src="https://github.com/user-attachments/assets/08b3e02e-4e8a-47d6-b00a-e9fb36e9a3c9" alt="Description de l'image" width="500"/>
-    </div>
-</div>
+---
 
+## 📨 **Contact**
 
+L'utilisateur remplit le formulaire de contact. Une fois soumis, les données sont enregistrées en base de données.
 
-## Brasserie : 
+<img src="https://github.com/user-attachments/assets/6b10ec47-3b53-43ef-8a98-80b889121000" alt="Formulaire Contact"/>
+<img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Enregistrement Contact" width="400"/>
 
-l'utilisateur rempli le formulaire puis l'envoie. Un calcul est ensuite fait puis affiche les differents resultats.
-<div>
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/49c2a146-6a10-41c8-8827-3e923c2ba097" alt="Description de l'image"  width="600"/>
-        <img src="https://github.com/user-attachments/assets/5237355e-3dc0-450a-8b5a-a88742a04d74" alt="Description de l'image" width="500"/>
-    </div>
-</div>
+---
 
-Le brasseur peut gerer les stocks des matières premieres. Il peut en ajouter, modifier ou supprimer.
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/c3b7a3dd-65d0-4a4d-9ac8-1b6b6699aa17" alt="Description de l'image" width="600"/>
-     <img src="https://github.com/user-attachments/assets/53cbfb59-a5ef-4ee5-aa12-e05c0b6d0d23" alt="Description de l'image" width="500"/>
-    </div>
-</div>
+## 🔐 **Connexion**
 
-Le brasseur peut gerer les stocks des produits finis pret à la vente. Il peut en ajouter, modifier ou supprimer.
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/87a8c611-8293-4265-9b4b-e14450b91de3" alt="Description de l'image"  width="600"/>
-    <img src="https://github.com/user-attachments/assets/bad84a5b-be7e-41c0-b827-95b69b3396c8" alt="Description de l'image" width="500"/>
-    </div>
-</div>
+L'utilisateur remplit le formulaire de connexion. Le mot de passe est hashé et comparé avec la base de données.  
+Si les identifiants sont valides, l'ID utilisateur est stocké dans la session.
 
+<img src="https://github.com/user-attachments/assets/67e756e2-4994-4c7e-a80f-9d3f618205ae" alt="Formulaire Connexion"/>
+<img src="https://github.com/user-attachments/assets/0fe2a821-5cc4-458b-9860-4305cde83d8c" alt="Hashage Mot de Passe"/>
+<img src="https://github.com/user-attachments/assets/08b3e02e-4e8a-47d6-b00a-e9fb36e9a3c9" alt="Vérification Session" width="500"/>
 
-## Admin : 
+---
 
-Nous pouvons ajouter un utilisateur, dont le mot de pass sera par default 1234 mais hashé (md5) en base de donnée
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/11af3073-f3ff-4009-8fe2-bfb0589b2b39" alt="Description de l'image" width="800"/>
-    <img src="https://github.com/user-attachments/assets/5c7278ee-8070-4697-9f96-3b818529e373" alt="Description de l'image"  width="800"/>
-    </div>
-</div>
+## 🍺 **Brasserie**
 
-Ainsi que gerer un utilisateur en modifiant des données ou en supprimant le compte.
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/0d5bfd2c-612b-4960-bd37-2464b248259f" alt="Description de l'image" width="800"/>
-    <img src="https://github.com/user-attachments/assets/f31cc96c-e57b-4fb3-bf4f-d7c90bb9fb4c" alt="Description de l'image"  width="800"/>
-    </div>
-</div>
+L'utilisateur remplit un formulaire, un calcul est ensuite effectué et les résultats sont affichés.
 
+<img src="https://github.com/user-attachments/assets/49c2a146-6a10-41c8-8827-3e923c2ba097" alt="Calcul Brassage" width="600"/>
+<img src="https://github.com/user-attachments/assets/5237355e-3dc0-450a-8b5a-a88742a04d74" alt="Résultats Brassage" width="500"/>
 
-## Direction :
+### 📦 **Gestion des matières premières**
 
-La direction peut voir les achats de matieres premieres, les ventes de ses produits, les filtrer en fonction de la date.
-<div>
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/2e875e72-d99b-4f7d-855c-3b47b4e02b01" alt="Description de l'image"/>
-    <img src="https://github.com/user-attachments/assets/6a92e475-c306-473f-b41e-09d6bef2d75f" alt="Description de l'image" width="400/>
-    </div>
-</div>
+Le brasseur peut ajouter, modifier ou supprimer les stocks.
 
-Un calcul des depenses et des achats et fait et est affiché pour la direction.
-<div>
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/ddbda3c8-1fa5-405f-b9f2-aa27c464c033" alt="Description de l'image"/>
-    <img src="https://github.com/user-attachments/assets/17e5ea00-18e7-4438-a320-98e3b4c79624" alt="Description de l'image" width="400/>
-    </div>
-</div>
+<img src="https://github.com/user-attachments/assets/c3b7a3dd-65d0-4a4d-9ac8-1b6b6699aa17" alt="Stocks MP" width="600"/>
+<img src="https://github.com/user-attachments/assets/53cbfb59-a5ef-4ee5-aa12-e05c0b6d0d23" alt="Gestion MP" width="500"/>
 
+### 🛒 **Gestion des produits finis**
 
-## Client :
+Le brasseur peut également gérer les produits finis prêts à la vente.
 
-Le client peut voir ses points de fidelité
-<div>
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/eafe207f-bf11-415d-bd68-a7be0cf878a8" alt="Description de l'image" width="800/>
-    <img src="https://github.com/user-attachments/assets/0c5c59ad-d7db-4328-9113-c8fca16aca09" alt="Description de l'image" width="800/>
-  </div>
-</div>
+<img src="https://github.com/user-attachments/assets/87a8c611-8293-4265-9b4b-e14450b91de3" alt="Produits Finis" width="600"/>
+<img src="https://github.com/user-attachments/assets/bad84a5b-be7e-41c0-b827-95b69b3396c8" alt="Gestion Produits" width="500"/>
 
+---
+
+## ⚙️ **Admin**
+
+L'administrateur peut ajouter un utilisateur. Le mot de passe par défaut est `1234` (hashé en MD5).
+
+<img src="https://github.com/user-attachments/assets/11af3073-f3ff-4009-8fe2-bfb0589b2b39" alt="Ajout Utilisateur" width="800"/>
+<img src="https://github.com/user-attachments/assets/5c7278ee-8070-4697-9f96-3b818529e373" alt="Utilisateur Créé" width="800"/>
+
+Il peut également modifier ou supprimer les utilisateurs.
+
+<img src="https://github.com/user-attachments/assets/0d5bfd2c-612b-4960-bd37-2464b248259f" alt="Modification Utilisateur" width="800"/>
+<img src="https://github.com/user-attachments/assets/f31cc96c-e57b-4fb3-bf4f-d7c90bb9fb4c" alt="Suppression Utilisateur" width="800"/>
+
+---
+
+## 📊 **Direction**
+
+La direction peut consulter les achats de matières premières et les ventes de produits, avec filtres par date.
+
+<img src="https://github.com/user-attachments/assets/2e875e72-d99b-4f7d-855c-3b47b4e02b01" alt="Achats et Ventes"/>
+<img src="https://github.com/user-attachments/assets/6a92e475-c306-473f-b41e-09d6bef2d75f" alt="Filtrage Date" width="600"/>
+
+Un calcul des dépenses et bénéfices est également disponible.
+
+<img src="https://github.com/user-attachments/assets/ddbda3c8-1fa5-405f-b9f2-aa27c464c033" alt="Calcul Dépenses"/>
+<img src="https://github.com/user-attachments/assets/17e5ea00-18e7-4438-a320-98e3b4c79624" alt="Bilan Financier" width="400"/>
+
+---
+
+## 👤 **Client**
+
+Le client peut consulter ses points de fidélité.
+
+<img src="https://github.com/user-attachments/assets/eafe207f-bf11-415d-bd68-a7be0cf878a8" alt="Fidélité Client" width="600"/>
+<img src="https://github.com/user-attachments/assets/0c5c59ad-d7db-4328-9113-c8fca16aca09" alt="Points Fidélité" width="600"/>
+
+Voir les produits disponible.
+
+<img src="https://github.com/user-attachments/assets/3bcd3841-6ef6-423f-89dc-aff3fb583540" alt="Fidélité Client" width="600"/>
+<img src="https://github.com/user-attachments/assets/2fe0374b-356d-4da3-b8a9-561cb6e56d93" alt="Points Fidélité" width="600"/>
+
+Passer une reservation.
+
+<img src="https://github.com/user-attachments/assets/75527b61-78cc-4deb-99f6-bb9c8713eb0a" alt="Fidélité Client" width="600"/>
+<img src="https://github.com/user-attachments/assets/2388b7ea-3480-4490-bcfd-bab3bd1eb030" alt="Points Fidélité" width="600"/>
 
 
 
-## Caissier :
+---
 
-Le caissier peut ajouter un utilisateur, peut confirmer une commande et voir les réservation des clients en attente.
-  <div style="display: inline-block;">
-    <img src="https://github.com/user-attachments/assets/9881eb4e-d4ac-4a23-a3e4-0fe8e8bac6d3" alt="Description de l'image" width="600/>
-    <img src="https://github.com/user-attachments/assets/6dfadde7-a4a0-4ad7-a675-fdbe7a5807e4" alt="Description de l'image" width="600/>
-    <img src="https://github.com/user-attachments/assets/318e4f44-b6e3-4b54-8662-dcc9abdc83cd" alt="Description de l'image" width="600/>
-  </div>
-</div>
+## 💵 **Caissier**
+
+Le caissier peut ajouter un utilisateur
+
+<img src="https://github.com/user-attachments/assets/e1b8589e-1a8a-427e-806f-20db715141ea" alt="Ajout Utilisateur" width="600"/>
+<img src="https://github.com/user-attachments/assets/5727a807-47d0-4654-af02-f1cde9f36fd2" alt="Réservations" width="600"/>
+
+
+Le caissier peut confirmer une commande
+
+<img src="https://github.com/user-attachments/assets/1e23055d-12c7-4a5c-85ac-cd7bd67026f4" alt="Ajout Utilisateur" width="600"/>
+<img src="https://github.com/user-attachments/assets/25d9b6a4-68e7-4367-9085-89cb3372b921" alt="Réservations" width="600"/>
+
+Et voir les réservations clients.
+
+<img src="https://github.com/user-attachments/assets/9dddd6af-bbd4-4436-b7d6-35a955c65024" alt="Ajout Utilisateur" width="600"/>
+<img src="https://github.com/user-attachments/assets/7018a50b-a18a-457f-adf9-246b3d25d8c8" alt="Réservations" width="600"/>
+
 
 
 

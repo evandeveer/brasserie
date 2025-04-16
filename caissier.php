@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 $servername = "sql208.infinityfree.com";
 $username = "if0_38342249";
 $password = "8p8SMDlMUOmSd";
@@ -38,11 +41,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $prix_resa->execute(['id_resa' => $_POST['id_resa']]);
         $prix_resa = $prix_resa->fetch(PDO::FETCH_ASSOC);
 
-        if ($_POST['statut_resa'] == "validee") {
+        if ($_POST['statut_resa'] == "validée") {
+
+            $client_resa = $bdd->prepare("SELECT id_client FROM reservations WHERE id = :id_resa");
+            $client_resa->execute(['id_resa' => $_POST['id_resa']]);
+            $client_resa = $client_resa->fetch(PDO::FETCH_ASSOC);
+
+            var_dump($client_resa['id_client']);
+
             $requete = $bdd->prepare('UPDATE utilisateurs SET fidelite = fidelite + :point_gagne WHERE id = :id');
             $requete->execute([
-                'point_gagne' => $prix_resa['prix_resa'], //1€ = 1 point de fidélité
-                'id' => $_POST['id_resa'],
+                'point_gagne' => $prix_resa['prix_resa'], 
+                'id' => $client_resa['id_client'],
             ]);
            
         }

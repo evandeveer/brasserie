@@ -127,4 +127,5 @@ Fonctionnalités :
 
 Pouvoir se connecter : 
 
-![image](https://github.com/user-attachments/assets/5c936453-65ec-43b6-9c38-d7b8dc7f9e86)
+![image](https://github.com/user-attachments/assets/22a68a13-b396-41ce-80c2-867c3edc74a3)
+

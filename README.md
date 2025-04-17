@@ -203,13 +203,13 @@ Il peut également modifier ou supprimer les utilisateurs.
 
 La direction peut consulter les achats de matières premières et les ventes de produits, avec filtres par date.
 
-[Code pour modifier / supprimer un utilisateur](https://github.com/evandeveer/brasserie/blob/main/direction.php#L31)  
+[Code pour lister les achats / depenses](https://github.com/evandeveer/brasserie/blob/main/direction.php#L31)  
 
 <img src="https://github.com/user-attachments/assets/6a92e475-c306-473f-b41e-09d6bef2d75f" alt="Filtrage Date" width="600"/>
 
 Un calcul des dépenses et bénéfices est également disponible.
 
-[Code pour modifier / supprimer un utilisateur](https://github.com/evandeveer/brasserie/blob/main/direction.php#L48)  
+[Code afficher le montant total des depenses / achats](https://github.com/evandeveer/brasserie/blob/main/direction.php#L48)  
 
 <img src="https://github.com/user-attachments/assets/17e5ea00-18e7-4438-a320-98e3b4c79624" alt="Bilan Financier" width="400"/>
 
@@ -219,17 +219,17 @@ Un calcul des dépenses et bénéfices est également disponible.
 
 Le client peut consulter ses points de fidélité.
 
-<img src="https://github.com/user-attachments/assets/eafe207f-bf11-415d-bd68-a7be0cf878a8" alt="Fidélité Client" width="600"/>
+[Code recuperer les points de fidelité](https://github.com/evandeveer/brasserie/blob/main/client.php#L22)  
 <img src="https://github.com/user-attachments/assets/0c5c59ad-d7db-4328-9113-c8fca16aca09" alt="Points Fidélité" width="600"/>
 
 Voir les produits disponible.
 
-<img src="https://github.com/user-attachments/assets/3bcd3841-6ef6-423f-89dc-aff3fb583540" alt="Fidélité Client" width="600"/>
-<img src="https://github.com/user-attachments/assets/2fe0374b-356d-4da3-b8a9-561cb6e56d93" alt="Points Fidélité" width="600"/>
+[Code afficher les produits disponibles](https://github.com/evandeveer/brasserie/blob/main/client.php#L166)  
+<img src="https://github.com/user-attachments/assets/2fe0374b-356d-4da3-b8a9-561cb6e56d93" alt="client" width="600"/>
 
 Passer une reservation.
 
-<img src="https://github.com/user-attachments/assets/75527b61-78cc-4deb-99f6-bb9c8713eb0a" alt="Fidélité Client" width="600"/>
+[Code pour inserer la reservation](https://github.com/evandeveer/brasserie/blob/main/client.php#L47)  
 <img src="https://github.com/user-attachments/assets/2388b7ea-3480-4490-bcfd-bab3bd1eb030" alt="Points Fidélité" width="600"/>
 
 
@@ -240,18 +240,21 @@ Passer une reservation.
 
 Le caissier peut ajouter un utilisateur
 
-<img src="https://github.com/user-attachments/assets/e1b8589e-1a8a-427e-806f-20db715141ea" alt="Ajout Utilisateur" width="600"/>
+[Code pour ajouter un client en bdd](https://github.com/evandeveer/brasserie/blob/main/caissier.php#L27)  
+
 <img src="https://github.com/user-attachments/assets/5727a807-47d0-4654-af02-f1cde9f36fd2" alt="Réservations" width="600"/>
 
 
 Le caissier peut confirmer une commande
 
-<img src="https://github.com/user-attachments/assets/1e23055d-12c7-4a5c-85ac-cd7bd67026f4" alt="Ajout Utilisateur" width="600"/>
+[Systeme de radio valider / refuser](https://github.com/evandeveer/brasserie/blob/main/caissier.php#156)  
+
 <img src="https://github.com/user-attachments/assets/25d9b6a4-68e7-4367-9085-89cb3372b921" alt="Réservations" width="600"/>
 
 Et voir les réservations clients.
 
-<img src="https://github.com/user-attachments/assets/9dddd6af-bbd4-4436-b7d6-35a955c65024" alt="Ajout Utilisateur" width="600"/>
+[Afficher les reservations](https://github.com/evandeveer/brasserie/blob/main/caissier.php#187)  
+
 <img src="https://github.com/user-attachments/assets/7018a50b-a18a-457f-adf9-246b3d25d8c8" alt="Réservations" width="600"/>
 
 ---

@@ -265,12 +265,12 @@ Un visiteur du site ne peut pas acceder à une page s'il n'a pas le role (par ex
 grace à la verification de l'id role de la session sur chaque page.
 exemple admin : 
 
-<img src="https://github.com/user-attachments/assets/6627643b-da35-45c5-8080-14bbff6e0981" alt="Ajout Utilisateur" width="600"/>
+<img src="https://github.com/user-attachments/assets/6627643b-da35-45c5-8080-14bbff6e0981" alt="session" width="600"/>
 
 Une fois connecté le role a accès à un bouton special en fonction de son role qui le redirige vers la page de son role.
 
-<img src="https://github.com/user-attachments/assets/82cb6378-a7b0-4d20-b3bb-7f7ae4b935bf" alt="Ajout Utilisateur" width="600"/>
-<img src="https://github.com/user-attachments/assets/55e597e9-fb20-4a80-8c3a-89c4f4b3cff5" alt="Ajout Utilisateur" width="600"/>
+<img src="https://github.com/user-attachments/assets/82cb6378-a7b0-4d20-b3bb-7f7ae4b935bf" alt="session" width="600"/>
+<img src="https://github.com/user-attachments/assets/55e597e9-fb20-4a80-8c3a-89c4f4b3cff5" alt="session" width="600"/>
 
 ---
 
@@ -279,8 +279,12 @@ Une fois connecté le role a accès à un bouton special en fonction de son role
 Une fonction WriteLogs a été créée dans une classe Logs ce qui permet d'appeler la fonction dans n'importe quelle page.
 Un affichage des logs et aussi present dans la page admin.
 
-<img src="https://github.com/user-attachments/assets/58c88fa9-16c0-4b78-9576-6aa15122b86c" alt="Ajout Utilisateur" width="600"/>
-<img src="https://github.com/user-attachments/assets/9e0a18bb-f598-494d-a9ab-e3a29756a6d6" alt="Ajout Utilisateur" width="600"/>
+
+
+[Code des fonctions logs](https://github.com/evandeveer/brasserie/blob/main/Logs.php#L3)  
+
+Appel de la fonction lors d'une connexion :  
+<img src="https://github.com/user-attachments/assets/9e0a18bb-f598-494d-a9ab-e3a29756a6d6" alt="Logs" width="600"/>
 
 
 # 🔎 **Sources**

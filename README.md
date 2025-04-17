@@ -23,11 +23,11 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 | Rôle       | Email                    | Mot de passe |
 |------------|--------------------------|--------------|
-| Admin      | admin@gmail.com          | 1234         |
-| Brasseur   | brasseur@gmail.com       | 1234         |
-| Direction  | direction@gmail.com      | 1234         |
-| Caissier   | caissier@gmail.com          | 1234            |
-| Client     | jean@gmail.com          | 1234         |
+| Admin      | admin@gmail.com          | 12345         |
+| Brasseur   | brasseur@gmail.com       | 12345         |
+| Direction  | direction@gmail.com      | 12345         |
+| Caissier   | caissier@gmail.com          | 12345            |
+| Client     | jean@gmail.com          | 12345         |
 
 ---
 

@@ -159,23 +159,27 @@ Si les identifiants sont valides, l'ID utilisateur est stocké dans la session.
 
 ## 🍺 **Brasserie**
 
-L'utilisateur remplit un formulaire, un calcul est ensuite effectué et les résultats sont affichés.
+L'utilisateur rempli un formulaire, un calcul est ensuite effectué et les résultats sont affichés.
 
-<img src="https://github.com/user-attachments/assets/49c2a146-6a10-41c8-8827-3e923c2ba097" alt="Calcul Brassage" width="600"/>
+[Code du calcul](https://github.com/evandeveer/brasserie/blob/main/brasseur.php#L219)
+
+
 <img src="https://github.com/user-attachments/assets/5237355e-3dc0-450a-8b5a-a88742a04d74" alt="Résultats Brassage" width="500"/>
 
 ### 📦 **Gestion des matières premières**
 
 Le brasseur peut ajouter, modifier ou supprimer les stocks.
 
-<img src="https://github.com/user-attachments/assets/c3b7a3dd-65d0-4a4d-9ac8-1b6b6699aa17" alt="Stocks MP" width="600"/>
+[Code](https://github.com/evandeveer/brasserie/blob/main/brasseur.php#L30)  
+
 <img src="https://github.com/user-attachments/assets/53cbfb59-a5ef-4ee5-aa12-e05c0b6d0d23" alt="Gestion MP" width="500"/>
 
 ### 🛒 **Gestion des produits finis**
 
 Le brasseur peut également gérer les produits finis prêts à la vente.
 
-<img src="https://github.com/user-attachments/assets/87a8c611-8293-4265-9b4b-e14450b91de3" alt="Produits Finis" width="600"/>
+[Code](https://github.com/evandeveer/brasserie/blob/main/brasseur.php#L74)  
+
 <img src="https://github.com/user-attachments/assets/bad84a5b-be7e-41c0-b827-95b69b3396c8" alt="Gestion Produits" width="500"/>
 
 ---
@@ -184,12 +188,13 @@ Le brasseur peut également gérer les produits finis prêts à la vente.
 
 L'administrateur peut ajouter un utilisateur. Le mot de passe par défaut est `1234` (hashé en MD5).
 
-<img src="https://github.com/user-attachments/assets/11af3073-f3ff-4009-8fe2-bfb0589b2b39" alt="Ajout Utilisateur" width="800"/>
+[Code pour ajouter un utilisateur](https://github.com/evandeveer/brasserie/blob/main/admin.php#L28)  
+
 <img src="https://github.com/user-attachments/assets/5c7278ee-8070-4697-9f96-3b818529e373" alt="Utilisateur Créé" width="800"/>
 
 Il peut également modifier ou supprimer les utilisateurs.
 
-<img src="https://github.com/user-attachments/assets/0d5bfd2c-612b-4960-bd37-2464b248259f" alt="Modification Utilisateur" width="800"/>
+[Code pour modifier / supprimer un utilisateur](https://github.com/evandeveer/brasserie/blob/main/admin.php#L37)  
 <img src="https://github.com/user-attachments/assets/f31cc96c-e57b-4fb3-bf4f-d7c90bb9fb4c" alt="Suppression Utilisateur" width="800"/>
 
 ---
@@ -198,12 +203,14 @@ Il peut également modifier ou supprimer les utilisateurs.
 
 La direction peut consulter les achats de matières premières et les ventes de produits, avec filtres par date.
 
-<img src="https://github.com/user-attachments/assets/2e875e72-d99b-4f7d-855c-3b47b4e02b01" alt="Achats et Ventes"/>
+[Code pour modifier / supprimer un utilisateur](https://github.com/evandeveer/brasserie/blob/main/direction.php#L31)  
+
 <img src="https://github.com/user-attachments/assets/6a92e475-c306-473f-b41e-09d6bef2d75f" alt="Filtrage Date" width="600"/>
 
 Un calcul des dépenses et bénéfices est également disponible.
 
-<img src="https://github.com/user-attachments/assets/ddbda3c8-1fa5-405f-b9f2-aa27c464c033" alt="Calcul Dépenses"/>
+[Code pour modifier / supprimer un utilisateur](https://github.com/evandeveer/brasserie/blob/main/direction.php#L48)  
+
 <img src="https://github.com/user-attachments/assets/17e5ea00-18e7-4438-a320-98e3b4c79624" alt="Bilan Financier" width="400"/>
 
 ---

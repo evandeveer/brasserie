@@ -282,6 +282,8 @@ Les bases PHP et html : Cours Thibault Vinchent EPSI https://www.je-code.com/
 IA : https://chat.deepseek.com/ ou https://chatgpt.com/
 
 
+Video de presentation : https://youtu.be/npuQpdc-QLU
+
 
 
 

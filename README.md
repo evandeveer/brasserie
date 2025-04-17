@@ -139,7 +139,7 @@ Ce dépôt contient le code source du site, l'architecture des pages, ainsi que 
 
 ## 📨 **Contact**
 
-L'utilisateur remplit le formulaire de contact. Une fois soumis, les données sont enregistrées en base de données.
+L'utilisateur remplit le formulaire de contact. Une fois soumis, les données sont enregistrées en base de données.(Evan)  
 
 [Lien vers le code](https://github.com/evandeveer/brasserie/blob/main/index.php#L331)  
 <img src="https://github.com/user-attachments/assets/b430a63d-eaf3-48c5-810e-569c5067490b" alt="Enregistrement Contact" width="400"/>
@@ -148,8 +148,8 @@ L'utilisateur remplit le formulaire de contact. Une fois soumis, les données so
 
 ## 🔐 **Connexion**
 
-L'utilisateur remplit le formulaire de connexion. Le mot de passe est hashé et comparé avec la base de données.  
-Si les identifiants sont valides, l'ID utilisateur est stocké dans la session.
+L'utilisateur remplit le formulaire de connexion. Le mot de passe est hashé et comparé avec la base de données.
+Si les identifiants sont valides, l'ID utilisateur est stocké dans la session.(Evan)  
 
 [Code du formulaire](https://github.com/evandeveer/brasserie/blob/main/connexion.php#L60) [Code redirection](https://github.com/evandeveer/brasserie/blob/main/connexion.php#L60)  
 
@@ -159,7 +159,7 @@ Si les identifiants sont valides, l'ID utilisateur est stocké dans la session.
 
 ## 🍺 **Brasserie**
 
-L'utilisateur rempli un formulaire, un calcul est ensuite effectué et les résultats sont affichés.
+L'utilisateur rempli un formulaire, un calcul est ensuite effectué et les résultats sont affichés.(Yohann)  
 
 [Code du calcul](https://github.com/evandeveer/brasserie/blob/main/brasseur.php#L219)
 
@@ -168,7 +168,7 @@ L'utilisateur rempli un formulaire, un calcul est ensuite effectué et les résu
 
 ### 📦 **Gestion des matières premières**
 
-Le brasseur peut ajouter, modifier ou supprimer les stocks.
+Le brasseur peut ajouter, modifier ou supprimer les stocks.(Yohann)  
 
 [Code](https://github.com/evandeveer/brasserie/blob/main/brasseur.php#L30)  
 
@@ -176,7 +176,7 @@ Le brasseur peut ajouter, modifier ou supprimer les stocks.
 
 ### 🛒 **Gestion des produits finis**
 
-Le brasseur peut également gérer les produits finis prêts à la vente.
+Le brasseur peut également gérer les produits finis prêts à la vente.(Yohann)  
 
 [Code](https://github.com/evandeveer/brasserie/blob/main/brasseur.php#L74)  
 
@@ -186,7 +186,7 @@ Le brasseur peut également gérer les produits finis prêts à la vente.
 
 ## ⚙️ **Admin**
 
-L'administrateur peut ajouter un utilisateur. Le mot de passe par défaut est `1234` (hashé en MD5).
+L'administrateur peut ajouter un utilisateur. Le mot de passe par défaut est `1234` (hashé en MD5).(Evan)  
 
 [Code pour ajouter un utilisateur](https://github.com/evandeveer/brasserie/blob/main/admin.php#L28)  
 
@@ -194,22 +194,22 @@ L'administrateur peut ajouter un utilisateur. Le mot de passe par défaut est `1
 
 Il peut également modifier ou supprimer les utilisateurs.
 
-[Code pour modifier / supprimer un utilisateur](https://github.com/evandeveer/brasserie/blob/main/admin.php#L37)  
+[Code pour modifier / supprimer un utilisateur](https://github.com/evandeveer/brasserie/blob/main/admin.php#L37)(Evan)  
 <img src="https://github.com/user-attachments/assets/f31cc96c-e57b-4fb3-bf4f-d7c90bb9fb4c" alt="Suppression Utilisateur" width="800"/>
 
 ---
 
 ## 📊 **Direction**
 
-La direction peut consulter les achats de matières premières et les ventes de produits, avec filtres par date.
+La direction peut consulter les achats de matières premières et les ventes de produits, avec filtres par date.(Yohann-Evan)  
 
 [Code pour lister les achats / depenses](https://github.com/evandeveer/brasserie/blob/main/direction.php#L31)  
 
 <img src="https://github.com/user-attachments/assets/6a92e475-c306-473f-b41e-09d6bef2d75f" alt="Filtrage Date" width="600"/>
 
-Un calcul des dépenses et bénéfices est également disponible.
+Un calcul des dépenses et bénéfices est également disponible.(Yohann)  
 
-[Code afficher le montant total des depenses / achats](https://github.com/evandeveer/brasserie/blob/main/direction.php#L48)  
+[Code afficher le montant total des depenses / achats](https://github.com/evandeveer/brasserie/blob/main/direction.php#L48)    
 
 <img src="https://github.com/user-attachments/assets/17e5ea00-18e7-4438-a320-98e3b4c79624" alt="Bilan Financier" width="400"/>
 
@@ -217,17 +217,17 @@ Un calcul des dépenses et bénéfices est également disponible.
 
 ## 👤 **Client**
 
-Le client peut consulter ses points de fidélité.
+Le client peut consulter ses points de fidélité.(Evan)  
 
 [Code recuperer les points de fidelité](https://github.com/evandeveer/brasserie/blob/main/client.php#L22)  
 <img src="https://github.com/user-attachments/assets/eafe207f-bf11-415d-bd68-a7be0cf878a8" alt="Fidélité Client" width="600"/>
 
-Voir les produits disponible.
+Voir les produits disponible.(Yohann-Evan)  
 
 [Code afficher les produits disponibles](https://github.com/evandeveer/brasserie/blob/main/client.php#L166)  
 <img src="https://github.com/user-attachments/assets/2fe0374b-356d-4da3-b8a9-561cb6e56d93" alt="client" width="600"/>
 
-Passer une reservation.
+Passer une reservation.(Yohann-Evan)  
 
 [Code pour inserer la reservation](https://github.com/evandeveer/brasserie/blob/main/client.php#L47)  
 <img src="https://github.com/user-attachments/assets/2388b7ea-3480-4490-bcfd-bab3bd1eb030" alt="Points Fidélité" width="600"/>
@@ -238,20 +238,20 @@ Passer une reservation.
 
 ## 💵 **Caissier**
 
-Le caissier peut ajouter un utilisateur
+Le caissier peut ajouter un utilisateur(Yohann)  
 
 [Code pour ajouter un client en bdd](https://github.com/evandeveer/brasserie/blob/main/caissier.php#L27)  
 
 <img src="https://github.com/user-attachments/assets/5727a807-47d0-4654-af02-f1cde9f36fd2" alt="Réservations" width="600"/>
 
 
-Le caissier peut confirmer une commande
+Le caissier peut confirmer une commande(Evan)  
 
 [Systeme de radio valider / refuser](https://github.com/evandeveer/brasserie/blob/main/caissier.php#156)  
 
 <img src="https://github.com/user-attachments/assets/25d9b6a4-68e7-4367-9085-89cb3372b921" alt="Réservations" width="600"/>
 
-Et voir les réservations clients.
+Et voir les réservations clients.(Yohann-Evan)  
 
 [Afficher les reservations](https://github.com/evandeveer/brasserie/blob/main/caissier.php#187)  
 
@@ -262,12 +262,12 @@ Et voir les réservations clients.
 ## **Systeme de session**
 
 Un visiteur du site ne peut pas acceder à une page s'il n'a pas le role (par exemple en tapant "/admin.php")
-grace à la verification de l'id role de la session sur chaque page.
+grace à la verification de l'id role de la session sur chaque page.(Yohann-Evan)  
 exemple admin : 
 
 <img src="https://github.com/user-attachments/assets/6627643b-da35-45c5-8080-14bbff6e0981" alt="session" width="600"/>
 
-Une fois connecté le role a accès à un bouton special en fonction de son role qui le redirige vers la page de son role.
+Une fois connecté le role a accès à un bouton special en fonction de son role qui le redirige vers la page de son role.(Evan)  
 
 [Afficher le bouton en fonction du role](https://github.com/evandeveer/brasserie/blob/main/index.php#L115)  
 
@@ -278,7 +278,7 @@ Une fois connecté le role a accès à un bouton special en fonction de son role
 ## **Systeme de Logs**
 
 Une fonction WriteLogs a été créée dans une classe Logs ce qui permet d'appeler la fonction dans n'importe quelle page.
-Un affichage des logs et aussi present dans la page admin.
+Un affichage des logs et aussi present dans la page admin.(Evan)  
 
 
 

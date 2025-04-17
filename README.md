@@ -269,7 +269,8 @@ exemple admin :
 
 Une fois connecté le role a accès à un bouton special en fonction de son role qui le redirige vers la page de son role.
 
-<img src="https://github.com/user-attachments/assets/82cb6378-a7b0-4d20-b3bb-7f7ae4b935bf" alt="session" width="600"/>
+[Afficher le bouton en fonction du role](https://github.com/evandeveer/brasserie/blob/main/index.php#L115)  
+
 <img src="https://github.com/user-attachments/assets/55e597e9-fb20-4a80-8c3a-89c4f4b3cff5" alt="session" width="600"/>
 
 ---

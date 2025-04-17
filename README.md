@@ -192,9 +192,9 @@ L'administrateur peut ajouter un utilisateur. Le mot de passe par défaut est `1
 
 <img src="https://github.com/user-attachments/assets/5c7278ee-8070-4697-9f96-3b818529e373" alt="Utilisateur Créé" width="800"/>
 
-Il peut également modifier ou supprimer les utilisateurs.
+Il peut également modifier ou supprimer les utilisateurs.(**Evan**)  
 
-[Code pour modifier / supprimer un utilisateur](https://github.com/evandeveer/brasserie/blob/main/admin.php#L37)(**Evan**)  
+[Code pour modifier / supprimer un utilisateur](https://github.com/evandeveer/brasserie/blob/main/admin.php#L37) 
 <img src="https://github.com/user-attachments/assets/f31cc96c-e57b-4fb3-bf4f-d7c90bb9fb4c" alt="Suppression Utilisateur" width="800"/>
 
 ---

@@ -220,7 +220,7 @@ Un calcul des dépenses et bénéfices est également disponible.
 Le client peut consulter ses points de fidélité.
 
 [Code recuperer les points de fidelité](https://github.com/evandeveer/brasserie/blob/main/client.php#L22)  
-<img src="https://github.com/user-attachments/assets/0c5c59ad-d7db-4328-9113-c8fca16aca09" alt="Points Fidélité" width="600"/>
+<img src="https://github.com/user-attachments/assets/eafe207f-bf11-415d-bd68-a7be0cf878a8" alt="Fidélité Client" width="600"/>
 
 Voir les produits disponible.
 
